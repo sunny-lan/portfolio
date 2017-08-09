@@ -1,0 +1,163 @@
+@import "base";
+
+$middle-division-open: 45%;
+$middle-division-closed: 35%;
+
+$info-block-overlap: 10%;
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.sidebar-block {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: black;
+  transition: width 1s ease;
+  clip-path: polygon(
+                  0 0,
+                  100% 0,
+                  100% - $info-block-overlap 100%,
+                  0 100%);
+
+  width: $middle-division-open;
+
+  .sidebar-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: top 0.25s ease;
+    background-image: url('/img/cb-colour-nightsky.jpg');
+    filter: blur(20px);
+    background-size: cover;
+  }
+
+  .sidebar-content {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    height: 0;
+    transition: top 0.66s ease;
+
+    display: flex;
+    justify-content: center;
+    color: white;
+
+    .actual-sidebar-content {
+      .name-block {
+        display: flex;
+        flex-direction: column;
+        font-family: $secondary-font;
+        .greeting-text {
+          font-size: 60px;
+        }
+        .name-text {
+          padding-top: 5px;
+          font-size: 40px;
+        }
+      }
+    }
+
+    .nav-item {
+      opacity: 0.2;
+      transition: filter 0.5s;
+      filter: blur(10px);
+    }
+
+    .nav-item.selected {
+      opacity: 1;
+      filter: blur(0px);
+    }
+  }
+}
+
+.sidebar-block.closed {
+  width: $middle-division-closed;
+}
+
+.info-blocks {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  right: 0;
+  $width: (100% - $middle-division-closed) + $info-block-overlap;
+  width: $width;
+  min-height: 100%;
+  .info-block {
+    $scale: 100% / $width;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left: $info-block-overlap*$scale;
+  }
+}
+
+.intro-block {
+  height: 100vh;
+  .background {
+    background-image: url('/img/paper_dents_texture_76553_1920x1080.jpg');
+    opacity: 0.1;
+  }
+
+  .content {
+    max-width: 400px;
+  }
+  .about-header {
+    margin-bottom: 10px;
+  }
+  .github-link {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 40px;
+    .github-icon {
+      width: 40px;
+      height: 40px;
+      float: left;
+    }
+    .github-text {
+      font-weight: bold;
+      padding-left: 10px;
+    }
+  }
+}
+
+.block2 {
+  .blocks {
+    display: flex;
+    background: blue;
+    width: 400px;
+    .block {
+      transition: left 1s ease;
+      background: green;
+      width: 100px;
+      height: 50px;
+      margin: 10px;
+    }
+  }
+  border-bottom-color: black;
+  background: tomato;
+  padding: 50px;
+}
+
+.block-nav {
+  margin-top: 50px;
+}
+
+.block-nav-section {
+  font-family: $secondary-font;
+  font-size: 25px;
+  margin-top: 50px;
+}

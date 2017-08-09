@@ -1,0 +1,23 @@
+.intro-block {
+  height: 100vh; }
+  .intro-block .background {
+    background-image: url("/img/paper_dents_texture_76553_1920x1080.jpg");
+    opacity: 0.1; }
+  .intro-block .content {
+    max-width: 400px; }
+  .intro-block .about-header {
+    margin-bottom: 10px; }
+  .intro-block .github-link {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 40px; }
+    .intro-block .github-link .github-icon {
+      width: 40px;
+      height: 40px;
+      float: left; }
+    .intro-block .github-link .github-text {
+      font-weight: bold;
+      padding-left: 10px; }
+
+/*# sourceMappingURL=index.css.map */

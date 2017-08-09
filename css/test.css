@@ -1,0 +1,222 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-weight: normal; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Open Sans", sans-serif; }
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px; }
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1; }
+
+.sidebar-block {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: black;
+  transition: width 1s ease;
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+  width: 45%; }
+  .sidebar-block .sidebar-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: top 0.25s ease;
+    background-image: url("/img/cb-colour-nightsky.jpg");
+    filter: blur(20px);
+    background-size: cover; }
+  .sidebar-block .sidebar-content {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    height: 0;
+    transition: top 0.66s ease;
+    display: flex;
+    justify-content: center;
+    color: white; }
+    .sidebar-block .sidebar-content .actual-sidebar-content .name-block {
+      display: flex;
+      flex-direction: column;
+      font-family: "Raleway", sans-serif; }
+      .sidebar-block .sidebar-content .actual-sidebar-content .name-block .greeting-text {
+        font-size: 60px; }
+      .sidebar-block .sidebar-content .actual-sidebar-content .name-block .name-text {
+        padding-top: 5px;
+        font-size: 40px; }
+    .sidebar-block .sidebar-content .nav-item {
+      opacity: 0.2;
+      transition: filter 0.5s;
+      filter: blur(10px); }
+    .sidebar-block .sidebar-content .nav-item.selected {
+      opacity: 1;
+      filter: blur(0px); }
+
+.sidebar-block.closed {
+  width: 35%; }
+
+.info-blocks {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  right: 0;
+  width: 75%;
+  min-height: 100%; }
+  .info-blocks .info-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 13.33333%; }
+
+.intro-block {
+  height: 100vh; }
+  .intro-block .background {
+    background-image: url("/img/paper_dents_texture_76553_1920x1080.jpg");
+    opacity: 0.1; }
+  .intro-block .content {
+    max-width: 400px; }
+  .intro-block .about-header {
+    margin-bottom: 10px; }
+  .intro-block .github-link {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 40px; }
+    .intro-block .github-link .github-icon {
+      width: 40px;
+      height: 40px;
+      float: left; }
+    .intro-block .github-link .github-text {
+      font-weight: bold;
+      padding-left: 10px; }
+
+.block2 {
+  border-bottom-color: black;
+  background: tomato;
+  padding: 50px; }
+  .block2 .blocks {
+    display: flex;
+    background: blue;
+    width: 400px; }
+    .block2 .blocks .block {
+      transition: left 1s ease;
+      background: green;
+      width: 100px;
+      height: 50px;
+      margin: 10px; }
+
+.block-nav {
+  margin-top: 50px; }
+
+.block-nav-section {
+  font-family: "Raleway", sans-serif;
+  font-size: 25px;
+  margin-top: 50px; }
+
+/*# sourceMappingURL=test.css.map */

@@ -1,0 +1,14 @@
+Database consists of a list of articles
+
+Each article consists of:
+
+Id
+Default ordering
+
+Title
+Date published
+Background picture
+
+Preview content
+
+Content

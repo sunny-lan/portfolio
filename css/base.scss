@@ -1,0 +1,46 @@
+@import "reset";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+
+$main-font: 'Open Sans', sans-serif;
+$secondary-font: 'Raleway', sans-serif;
+$code-font: 'Ubuntu Mono', monospace;
+
+$large-font-size: 50px;
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $main-font;
+}
+
+h1 {
+  font-family: $secondary-font;
+  font-size: $large-font-size;
+}
+
+//mixins
+@mixin flex {
+  // write the css here
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-columns($direction) {
+  @include flex;
+  flex-direction: column;
+  align-items: $direction;
+}
+
+@mixin fill-parent-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}

@@ -1,0 +1,127 @@
+@import "base";
+
+$sidebar-open: 45%;
+$sidebar-closed: 35%;
+$sidebar-angle: 10%;
+
+$sidebar-angle-scaled-closed: ($sidebar-closed / 100%) * $sidebar-angle;
+
+$animation-speed: 0.5s;
+
+.info-blocks {
+  //constants for calculations
+  $width-closed: (100% - $sidebar-closed) + $sidebar-angle-scaled-closed;
+  $scale-to-page-closed: 100% / $width-closed;
+
+  //stick this to the right
+  position: absolute;
+  right: 0;
+  width: $width-closed;
+
+  //align all children to right, in columns
+  @include flex-columns(flex-end);
+
+  //base for each info block - backgrounds should be placed in here
+  .info-block {
+    width: 100%; //make sure it takes up all the width
+
+    //foreground
+    .content {
+      float: right;
+      width: (100% - $sidebar-closed) * ($scale-to-page-closed);
+    }
+
+    //top class is injected into intro info block(s) by JS
+    &.top .content {
+      width: (100% - $sidebar-open) * ($scale-to-page-closed);
+    }
+  }
+}
+
+.sidebar {
+  //fix on left side of page
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  //make slanted edge
+  clip-path: polygon(
+                  0 0,
+                  100% 0,
+                  100% - $sidebar-angle 100%,
+                  0 100%);
+
+  //initial width
+  width: $sidebar-open;
+
+  //animate it!
+  transition: width $animation-speed ease;
+
+  &.closed {
+    width: $sidebar-closed;
+  }
+}
+
+.sidebar.background {
+  background: black;
+
+  //background picture layer
+  .background {
+    @include fill-parent-bg;
+    background-image: url('/img/cb-colour-nightsky.jpg');
+    filter: blur(20px);
+    background-size: cover;
+    z-index: -1;
+
+    //animate top
+    transition: top $animation-speed ease;
+  }
+}
+
+//moving component
+.sidebar.nav-bar-wrapper {
+  .nav-bar {
+    //keep component where it is, unless modified by jQuery
+    position: absolute;
+    top: 40%; //default vertical position
+    left: 50%;
+    transform: translateX(-50%);
+
+    //animate it!
+    transition: top $animation-speed ease;
+
+    .nav-item {
+      //aesthetics
+      white-space: nowrap; //don't wrap nav items (ugly)
+      color: white; //since background is black
+
+      //fade in/out animations
+      transition: filter $animation-speed ease, opacity $animation-speed ease, transform $animation-speed ease;
+      filter: blur(15px);
+      transform: scale(1);
+      opacity: 0.5;
+      &.selected {
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+@import "blocks/index";
+
+//content:
+.name-block {
+  display: flex;
+  flex-direction: column;
+  font-family: $secondary-font;
+  .greeting-text {
+    font-size: 60px;
+  }
+  .name-text {
+    padding-top: 5px;
+    font-size: 40px;
+  }
+}
