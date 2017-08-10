@@ -47,7 +47,7 @@ $(function () {
 
         // Intro -> Content transitions, navbar parallax
         if (s > 10) {
-            $('#nav-bar').css('top', s.map(0, h, 35, 10) + '%');
+            $('#nav-bar').css('top', s.map(0, h, 35, 0) + '%');
             $('.sidebar').addClass('closed');
             $('#nav-bar-wrapper').addClass('closed');
         } else {
@@ -56,18 +56,17 @@ $(function () {
             $('#nav-bar-wrapper').removeClass('closed');
         }
 
+        // Selected animations
         var viewStart = s,
-            viewEnd = s + pgHeight - 10;
-        console.log("View start:", viewStart, ", View end:", viewEnd);
-
-        // Selected
+            viewEnd = s + pgHeight;
+        var errAllow = 3;
         for (var articleID in articles) if (articles.hasOwnProperty(articleID)) {
             var article = articles[articleID];
             var element = article.previewElem;
             var top = element.offset().top,
                 bottom = top + element.height();
             console.log('Top', top);
-            if (top >= viewStart && top <= viewEnd)
+            if (top - errAllow >= viewStart && bottom <= viewEnd + errAllow)
                 article.navBarElem.addClass('selected');
             else
                 article.navBarElem.removeClass('selected');

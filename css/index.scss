@@ -99,7 +99,7 @@ $min: -10E50;
       font-size: 20px;
 
       //fade in/out animations
-      transition: filter $animation-speed ease, opacity $animation-speed ease, transform $animation-speed ease;
+      transition: filter 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
       filter: blur(1px);
       transform: scale(1);
       opacity: 0.5;

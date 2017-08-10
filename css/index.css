@@ -157,7 +157,7 @@ h1 {
     color: white;
     margin-bottom: 50px;
     font-size: 20px;
-    transition: filter 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+    transition: filter 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
     filter: blur(1px);
     transform: scale(1);
     opacity: 0.5; }

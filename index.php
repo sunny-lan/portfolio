@@ -1,3 +1,9 @@
+<?php
+require_once "backend/article_mgr.php";
+require_once "backend/util.php";
+$articleMgr = new ArticlesMgr(Util::db_connect());
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,39 +16,13 @@
             crossorigin="anonymous"></script>
     <script src="/js/index.js"></script>
 
-    <!--This is testing stuff-->
-    <script type="application/json" id="injected-schema">
-        {
-            "articles": {
-                "1": {
-                    "navLabel": "Article 1",
-                    "preview": "<div style='height: 400px;'><div class='background' style='background: red;'></div>test</div>"
-                },
-                "2": {
-                    "navLabel": "Article 2",
-                    "preview": "<div style='height: 400px;'><div class='background' style='background: orange;'></div>test</div>"
-                },
-                "3": {
-                    "navLabel": "Article 2",
-                    "preview": "<div style='height: 400px;'><div class='background' style='background: yellow;'></div>test</div>"
-                },
-                "4": {
-                    "navLabel": "Article 2",
-                    "preview": "<div style='height: 400px;'><div class='background' style='background: green;'></div>test</div>"
-                },
-                "5": {
-                    "navLabel": "Article 2",
-                    "preview": "<div style='height: 400px;'><div class='background' style='background: blue;'></div>test</div>"
-                },
-                "6": {
-                    "navLabel": "Article 2",
-                    "preview": "<div style='height: 400px;'><div class='background' style='background: purple;'></div>test</div>"
-                }
-            }
-        }
-    </script>
-
+    <?php
+    echo "<script type = 'application/json' id = 'injected-schema'>";
+    echo json_encode($articleMgr->getSchema());
+    echo "</script>";
+    ?>
 </head>
+
 <body>
 
 <div id="info-blocks">
