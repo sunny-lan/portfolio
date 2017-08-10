@@ -1,15 +1,11 @@
-<?php
-require_once "backend/article_mgr.php";
-require_once "backend/util.php";
-$articleMgr = new ArticlesMgr(Util::db_connect());
-?>
+<?php require_once 'backend/include.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Sunny Lan</title>
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
     <script
             src="http://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -18,7 +14,9 @@ $articleMgr = new ArticlesMgr(Util::db_connect());
 
     <?php
     echo "<script type = 'application/json' id = 'injected-schema'>";
-    echo json_encode($articleMgr->getSchema());
+    echo json_encode([
+        "articles" => $articleMgr->getSchema()
+    ]);
     echo "</script>";
     ?>
 </head>

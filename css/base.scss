@@ -24,6 +24,33 @@ h1 {
   font-size: $large-font-size;
 }
 
+h2 {
+  font-family: $secondary-font;
+  font-size: 30px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td{
+  padding: 10px;
+}
+
+button{
+  background: transparent;
+  border: solid;
+  font-size: 20px;
+
+  &:hover{
+    background: cornflowerblue;
+  }
+}
+
 //mixins
 @mixin flex {
   // write the css here
@@ -41,7 +68,7 @@ h1 {
   position: absolute;
   top: 0;
   left: 0;
-  right:0;
+  right: 0;
   bottom: 0;
   background-size: cover;
   z-index: -1;

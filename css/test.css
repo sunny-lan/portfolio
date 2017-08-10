@@ -102,6 +102,26 @@ h1 {
   font-family: "Raleway", sans-serif;
   font-size: 50px; }
 
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px; }
+
+table {
+  border-collapse: collapse; }
+
+table, th, td {
+  border: 1px solid black; }
+
+th, td {
+  padding: 10px; }
+
+button {
+  background: transparent;
+  border: solid;
+  font-size: 20px; }
+  button:hover {
+    background: cornflowerblue; }
+
 .background {
   position: absolute;
   top: 0;

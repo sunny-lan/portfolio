@@ -18,37 +18,29 @@ class Article
 
     function getNavLabel()
     {
-        return Util::queryW($this->db, "SELECT nav_label FROM articles WHERE id='$this->id'")["nav_label"];
+        return Util::queryW($this->db, "SELECT nav_label FROM articles WHERE id='$this->id'")->fetch_assoc()["nav_label"];
     }
 
     function getContent()
     {
-        $filePath = Util::queryW($this->db, "SELECT content_file_path FROM articles WHERE id='$this->id'")->fetch_assoc()["content_file_path"];
-        $file = fopen($filePath, "r");
-        $str = fread($file, filesize($filePath));
-        fclose($file);
-        return $str;
+        return Util::queryW($this->db, "SELECT content FROM articles WHERE id='$this->id'")->fetch_assoc()["content"];
     }
 
     function getPreview()
     {
-        $filePath = Util::queryW($this->db, "SELECT preview_file_path FROM articles WHERE id='$this->id'")->fetch_assoc()["preview_file_path"];
-        $file = fopen($filePath, "r");
-        $str = fread($file, filesize($filePath));
-        fclose($file);
-        return $str;
+        return Util::queryW($this->db, "SELECT preview FROM articles WHERE id='$this->id'")->fetch_assoc()["preview"];
     }
 
-    function modify($content, $preview, $defaultDisplayOrder)
+    function getDefaultDisplayOrder()
     {
-        $id = $this->id;
-        $file = fopen("$id-content.html", "w");
-        fwrite($file, $content);
-        fclose($file);
-        $file = fopen("$id-preview.html", "w");
-        fwrite($file, $preview);
-        fclose($file);
-        Util::queryW($this->db, "UPDATE articles SET content_file_path='$id-content.html' preview_file_path='$id-preview.html' default_display_order='$defaultDisplayOrder' WHERE id='$id'");
+        return Util::queryW($this->db, "SELECT default_display_order FROM articles WHERE id='$this->id'")->fetch_assoc()["default_display_order"];
+    }
+
+    function modify($content, $preview, $defaultDisplayOrder, $navLabel)
+    {
+        $content=$this->db->escape_string($content);
+        $preview=$this->db->escape_string($preview);
+        Util::queryW($this->db, "UPDATE articles SET content='$content', preview='$preview', default_display_order='$defaultDisplayOrder', nav_label='$navLabel' WHERE id='$this->id'");
     }
 
     function getSchema()

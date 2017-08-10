@@ -32,17 +32,19 @@ class ArticlesMgr
         return Util::toArray(Util::queryW($this->db, "SELECT id FROM articles"), "id");
     }
 
-    function createArticle($content, $preview, $defaultDisplayOrder)
+    function createArticle()
     {
         Util::queryW($this->db, "INSERT INTO articles VALUES ()");
-        $id = Util::getLastID($this->db);
-        $article = new Article($this->db, $id);
-        $article->modify($content, $preview, $defaultDisplayOrder);
-        return $article;
+        return Util::getLastID($this->db);
     }
 
     function getArticle($id)
     {
         return new Article($this->db, $id);
+    }
+
+    function deleteArticle(Article $article)
+    {
+        Util::queryW($this->db, " DELETE FROM articles WHERE id='$article->id'");
     }
 }
