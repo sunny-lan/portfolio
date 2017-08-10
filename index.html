@@ -9,13 +9,30 @@
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
     <script src="/js/index.js"></script>
+
+    <!--This is testing stuff-->
+    <script type="application/json" id="injected-schema">
+        {
+            "articles": {
+                "1": {
+                    "navLabel": "Article 1",
+                    "preview": "<div style='height: 400px;'><div class='background' style='background: blue;'></div>test</div>"
+                },
+                "2": {
+                    "navLabel": "Article 2",
+                    "preview": "<div style='height: 400px;'><div class='background' style='background: green;'></div>test</div>"
+                }
+            }
+        }
+    </script>
+
 </head>
 <body>
 
-<div class="info-blocks">
-    <div class="info-block top">
+<div id="info-blocks">
+    <div id="about-me" class="info-block">
         <div class="background"></div>
-        <div class="content">
+        <div class="content top">
             <h1 class="about-header">About me</h1>
             <p class="about-text">
                 Man request adapted spirits set pressed. Up to denoting subjects sensible feelings it indulged
@@ -30,23 +47,14 @@
             </a>
         </div>
     </div>
-    <div class="info-block" style="background-color: gold">
-        <div class="content" style="height: 90vh">dsffdf</div>
-    </div>
-    <div class="info-block" style="background-color: darkseagreen">
-        <div class="content" style="height: 90vh">cvxn</div>
-    </div>
-    <div class="info-block" style="background-color: blanchedalmond">
-        <div class="content" style="height: 90vh">ew456</div>
-    </div>
 </div>
 
 <div class="sidebar background">
     <div class="background"></div>
 </div>
-<div class="sidebar nav-bar-wrapper">
-    <div class="nav-bar">
-        <div class="nav-item name-block">
+<div id="nav-bar-wrapper" class="sidebar">
+    <div id="nav-bar">
+        <div id="name-block" class="nav-item">
             <span class="greeting-text">Hello,</span>
             <span class="name-text"><span class="prompt">></span> I'm Sunny Lan</span>
         </div>

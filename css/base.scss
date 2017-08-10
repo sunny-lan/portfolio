@@ -10,9 +10,9 @@ $code-font: 'Ubuntu Mono', monospace;
 $large-font-size: 50px;
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important;
 }
 
 body {
@@ -37,10 +37,12 @@ h1 {
   align-items: $direction;
 }
 
-@mixin fill-parent-bg {
+.background {
   position: absolute;
   top: 0;
   left: 0;
+  right:0;
   bottom: 0;
-  right: 0;
+  background-size: cover;
+  z-index: -1;
 }

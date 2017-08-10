@@ -1,21 +1,40 @@
-.intro-block {
+#about-me {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  align-items: flex-end;
+  justify-content: center;
+  order: $min;
+
+  .content {
+    padding-right: 100px;
+  }
+
   .background {
     background-image: url('/img/paper_dents_texture_76553_1920x1080.jpg');
     opacity: 0.1;
   }
 
   .about-text {
-    max-width: 400px;
+    width: 500px;
+    display: block;
+    float: right;
+    clear: right;
   }
+
   .about-header {
     margin-bottom: 10px;
+    display: inline-block;
+    float: right;
   }
   .github-link {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     margin-top: 40px;
+    clear: right;
+    float: right;
     .github-icon {
       width: 40px;
       height: 40px;

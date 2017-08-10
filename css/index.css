@@ -91,9 +91,9 @@ input, select {
   vertical-align: middle; }
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important; }
 
 body {
   font-family: "Open Sans", sans-serif; }
@@ -102,7 +102,16 @@ h1 {
   font-family: "Raleway", sans-serif;
   font-size: 50px; }
 
-.info-blocks {
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  z-index: -1; }
+
+#info-blocks {
   position: absolute;
   right: 0;
   width: 68.5%;
@@ -110,12 +119,13 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: flex-end; }
-  .info-blocks .info-block {
-    width: 100%; }
-    .info-blocks .info-block .content {
+  #info-blocks .info-block {
+    width: 100%;
+    position: relative; }
+    #info-blocks .info-block .content {
       float: right;
       width: 94.89051%; }
-    .info-blocks .info-block.top .content {
+    #info-blocks .info-block.top .content {
       width: 80.29197%; }
 
 .sidebar {
@@ -125,71 +135,83 @@ h1 {
   bottom: 0;
   clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
   width: 45%;
-  transition: width 0.5s ease; }
+  transition: width 0.4s ease; }
   .sidebar.closed {
     width: 35%; }
 
 .sidebar.background {
   background: black; }
   .sidebar.background .background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
     background-image: url("/img/cb-colour-nightsky.jpg");
     filter: blur(20px);
-    background-size: cover;
-    z-index: -1;
-    transition: top 0.5s ease; }
+    transition: top 0.4s ease; }
 
-.sidebar.nav-bar-wrapper .nav-bar {
+.sidebar#nav-bar-wrapper #nav-bar {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translateX(-50%);
-  transition: top 0.5s ease; }
-  .sidebar.nav-bar-wrapper .nav-bar .nav-item {
+  transition: top 0.4s ease; }
+  .sidebar#nav-bar-wrapper #nav-bar .nav-item {
     white-space: nowrap;
     color: white;
-    transition: filter 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
-    filter: blur(15px);
+    margin-bottom: 50px;
+    font-size: 20px;
+    transition: filter 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+    filter: blur(1px);
     transform: scale(1);
     opacity: 0.5; }
-    .sidebar.nav-bar-wrapper .nav-bar .nav-item.selected {
+    .sidebar#nav-bar-wrapper #nav-bar .nav-item.selected, .sidebar#nav-bar-wrapper #nav-bar .nav-item:hover {
       opacity: 1;
       filter: blur(0);
       transform: scale(1.1); }
 
-.intro-block {
-  height: 100vh; }
-  .intro-block .background {
+#about-me {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  align-items: flex-end;
+  justify-content: center;
+  order: -1000000000000000000000000000000000000000000000000000; }
+  #about-me .content {
+    padding-right: 100px; }
+  #about-me .background {
     background-image: url("/img/paper_dents_texture_76553_1920x1080.jpg");
     opacity: 0.1; }
-  .intro-block .about-text {
-    max-width: 400px; }
-  .intro-block .about-header {
-    margin-bottom: 10px; }
-  .intro-block .github-link {
+  #about-me .about-text {
+    width: 500px;
+    display: block;
+    float: right;
+    clear: right; }
+  #about-me .about-header {
+    margin-bottom: 10px;
+    display: inline-block;
+    float: right; }
+  #about-me .github-link {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-top: 40px; }
-    .intro-block .github-link .github-icon {
+    margin-top: 40px;
+    clear: right;
+    float: right; }
+    #about-me .github-link .github-icon {
       width: 40px;
       height: 40px;
       float: left; }
-    .intro-block .github-link .github-text {
+    #about-me .github-link .github-text {
       font-weight: bold;
       padding-left: 10px; }
 
-.name-block {
+#name-block {
   display: flex;
   flex-direction: column;
-  font-family: "Raleway", sans-serif; }
-  .name-block .greeting-text {
+  font-family: "Raleway", sans-serif;
+  order: -1000000000000000000000000000000000000000000000000000;
+  padding-bottom: 20px; }
+  #name-block .greeting-text {
     font-size: 60px; }
-  .name-block .name-text {
+  #name-block .name-text {
     padding-top: 5px;
     font-size: 40px; }
 
