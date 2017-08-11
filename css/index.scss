@@ -111,22 +111,3 @@ $min: -10E50;
     }
   }
 }
-
-@import "blocks/index";
-
-//content
-
-#name-block {
-  display: flex;
-  flex-direction: column;
-  font-family: $secondary-font;
-  order: $min;
-  .greeting-text {
-    font-size: 60px;
-  }
-  .name-text {
-    padding-top: 5px;
-    font-size: 40px;
-  }
-  padding-bottom: 20px;
-}

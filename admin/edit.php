@@ -20,6 +20,7 @@ if (!$_GET["create"])
                     "submit_article.php",
                     $.param({
                         create: <?php echo $_GET["create"]; ?>,
+                        articleID: <?php echo $_GET["id"]; ?>,
                         content: $("#contentText").val(),
                         preview: $("#previewText").val(),
                         defaultDisplayOrder: $('#defaultDisplayOrder').val(),
@@ -46,31 +47,36 @@ if (!$_GET["create"])
             else echo "New";
             ?></h2>
 
-        <div class="line">Nav label:
-            <input id="navLabel" title="navLabel" value="<?php
-            if (isset($article)) echo $article->getNavLabel();
-            ?>"/></div>
-
         <div class="line">Default display order:
             <input id="defaultDisplayOrder" title="defaultDisplayOrder" value="<?php
             if (isset($article)) echo $article->getDefaultDisplayOrder();
             ?>"/></div>
 
+
+        <div class="line">Nav label:</div>
+        <div class="line">
+<textarea id="navLabel" title="navLabel">
+<?php
+if (isset($article)) echo $article->getNavLabel();
+?>
+</textarea>
+        </div>
+
         <div class="line"> Preview:</div>
         <div class="line">
-            <textarea id="previewText" title="previewText">
-            <?php
-            if (isset($article)) echo $article->getPreview();
-            ?>
-            </textarea>
+<textarea id="previewText" title="previewText">
+<?php
+if (isset($article)) echo $article->getPreview();
+?>
+</textarea>
         </div>
 
         <div class="line"> Content:</div>
         <div class="line">
 <textarea id="contentText" title="contentText">
- <?php
- if (isset($article)) echo $article->getContent();
- ?>
+<?php
+if (isset($article)) echo $article->getContent();
+?>
 </textarea>
         </div>
 

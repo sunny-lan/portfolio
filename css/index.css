@@ -104,7 +104,7 @@ h1 {
 
 h2 {
   font-family: "Raleway", sans-serif;
-  font-size: 30px; }
+  font-size: 24px; }
 
 table {
   border-collapse: collapse; }
@@ -185,54 +185,5 @@ button {
       opacity: 1;
       filter: blur(0);
       transform: scale(1.1); }
-
-#about-me {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-  align-items: flex-end;
-  justify-content: center;
-  order: -1000000000000000000000000000000000000000000000000000; }
-  #about-me .content {
-    padding-right: 100px; }
-  #about-me .background {
-    background-image: url("/img/paper_dents_texture_76553_1920x1080.jpg");
-    opacity: 0.1; }
-  #about-me .about-text {
-    width: 500px;
-    display: block;
-    float: right;
-    clear: right; }
-  #about-me .about-header {
-    margin-bottom: 10px;
-    display: inline-block;
-    float: right; }
-  #about-me .github-link {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: 40px;
-    clear: right;
-    float: right; }
-    #about-me .github-link .github-icon {
-      width: 40px;
-      height: 40px;
-      float: left; }
-    #about-me .github-link .github-text {
-      font-weight: bold;
-      padding-left: 10px; }
-
-#name-block {
-  display: flex;
-  flex-direction: column;
-  font-family: "Raleway", sans-serif;
-  order: -1000000000000000000000000000000000000000000000000000;
-  padding-bottom: 20px; }
-  #name-block .greeting-text {
-    font-size: 60px; }
-  #name-block .name-text {
-    padding-top: 5px;
-    font-size: 40px; }
 
 /*# sourceMappingURL=index.css.map */

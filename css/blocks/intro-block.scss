@@ -1,3 +1,5 @@
+@import "../base";
+
 #about-me {
   height: 100vh;
   display: flex;
@@ -5,8 +7,6 @@
   text-align: right;
   align-items: flex-end;
   justify-content: center;
-  order: $min;
-
   .content {
     padding-right: 100px;
   }
@@ -44,5 +44,18 @@
       font-weight: bold;
       padding-left: 10px;
     }
+  }
+}
+
+#name-block {
+  display: flex;
+  flex-direction: column;
+  font-family: $secondary-font;
+  .greeting-text {
+    font-size: 60px;
+  }
+  .name-text {
+    padding-top: 5px;
+    font-size: 40px;
   }
 }

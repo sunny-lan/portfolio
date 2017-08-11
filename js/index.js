@@ -3,11 +3,12 @@ Number.prototype.map = function (in_min, in_max, out_min, out_max) {
 };
 
 function performLayout(articles, orderFunc) {
-    //clear old elements
-    $('#info-blocks > *').remove(':not(#about-me)');
-    $('#nav-bar > *').remove(':not(#name-block)');
-
     var infoBlock = $('#info-blocks');
+
+    //clear old elements
+    infoBlock.empty();
+    $('#nav-bar*').empty();
+
     var navBar = $("#nav-bar");
 
     for (var articleID in articles) if (articles.hasOwnProperty(articleID)) {
@@ -36,7 +37,7 @@ $(function () {
 
     $('#name-block').addClass('selected');
 
-    $(window).scroll(function () {
+    function scrollCalc() {
         //calculate scroll location
         var s = $(window).scrollTop(),
             pgHeight = $(window).height(),
@@ -57,19 +58,28 @@ $(function () {
         }
 
         // Selected animations
-        var viewStart = s,
-            viewEnd = s + pgHeight;
-        var errAllow = 3;
+        var errAllow = 50;
+        var viewStart = s  - errAllow,
+            viewEnd = s + pgHeight + errAllow;
+
+        // console.log("View start:", viewStart, "View end:", viewEnd);
+
         for (var articleID in articles) if (articles.hasOwnProperty(articleID)) {
             var article = articles[articleID];
             var element = article.previewElem;
             var top = element.offset().top,
                 bottom = top + element.height();
-            if (top - errAllow >= viewStart && bottom <= viewEnd + errAllow)
+
+            // console.log("top: ", top, "bottom: ", bottom);
+
+            if (top >= viewStart && bottom <= viewEnd)
                 article.navBarElem.addClass('selected');
             else
                 article.navBarElem.removeClass('selected');
         }
-    });
+    }
 
+    $(window).scroll(scrollCalc);
+
+    scrollCalc();
 });

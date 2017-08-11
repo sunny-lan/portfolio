@@ -1,23 +1,180 @@
-.intro-block {
-  height: 100vh; }
-  .intro-block .background {
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-weight: normal; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+* {
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important; }
+
+body {
+  font-family: "Open Sans", sans-serif; }
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px; }
+
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 24px; }
+
+table {
+  border-collapse: collapse; }
+
+table, th, td {
+  border: 1px solid black; }
+
+th, td {
+  padding: 10px; }
+
+button {
+  background: transparent;
+  border: solid;
+  font-size: 20px; }
+  button:hover {
+    background: cornflowerblue; }
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  z-index: -1; }
+
+#about-me {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  align-items: flex-end;
+  justify-content: center; }
+  #about-me .content {
+    padding-right: 100px; }
+  #about-me .background {
     background-image: url("/img/paper_dents_texture_76553_1920x1080.jpg");
     opacity: 0.1; }
-  .intro-block .content {
-    max-width: 400px; }
-  .intro-block .about-header {
-    margin-bottom: 10px; }
-  .intro-block .github-link {
+  #about-me .about-text {
+    width: 500px;
+    display: block;
+    float: right;
+    clear: right; }
+  #about-me .about-header {
+    margin-bottom: 10px;
+    display: inline-block;
+    float: right; }
+  #about-me .github-link {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-top: 40px; }
-    .intro-block .github-link .github-icon {
+    margin-top: 40px;
+    clear: right;
+    float: right; }
+    #about-me .github-link .github-icon {
       width: 40px;
       height: 40px;
       float: left; }
-    .intro-block .github-link .github-text {
+    #about-me .github-link .github-text {
       font-weight: bold;
       padding-left: 10px; }
+
+#name-block {
+  display: flex;
+  flex-direction: column;
+  font-family: "Raleway", sans-serif; }
+  #name-block .greeting-text {
+    font-size: 60px; }
+  #name-block .name-text {
+    padding-top: 5px;
+    font-size: 40px; }
 
 /*# sourceMappingURL=index.css.map */

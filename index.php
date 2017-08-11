@@ -24,23 +24,6 @@
 <body>
 
 <div id="info-blocks">
-    <div id="about-me" class="info-block">
-        <div class="background"></div>
-        <div class="content top">
-            <h1 class="about-header">About me</h1>
-            <p class="about-text">
-                Man request adapted spirits set pressed. Up to denoting subjects sensible feelings it indulged
-                directly. We dwelling elegance do shutters appetite yourself diverted. Our next drew much you with rank.
-                Tore many held age old rose than our. She literature sentiments any contrasted. Set aware joy sense
-                young now years china shy.
-                I am a custy boi.
-            </p>
-            <a class="github-link">
-                <img class="github-icon" src="img/GitHub-Mark.png">
-                <span class="github-text">github.com/sunny-lan</span>
-            </a>
-        </div>
-    </div>
 </div>
 
 <div class="sidebar background">
@@ -48,10 +31,6 @@
 </div>
 <div id="nav-bar-wrapper" class="sidebar">
     <div id="nav-bar">
-        <div id="name-block" class="nav-item">
-            <span class="greeting-text">Hello,</span>
-            <span class="name-text"><span class="prompt">></span> I'm Sunny Lan</span>
-        </div>
     </div>
 </div>
 
