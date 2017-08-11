@@ -40,6 +40,7 @@ class Article
     {
         $content=$this->db->escape_string($content);
         $preview=$this->db->escape_string($preview);
+        $navLabel=$this->db->escape_string($navLabel);
         Util::queryW($this->db, "UPDATE articles SET content='$content', preview='$preview', default_display_order='$defaultDisplayOrder', nav_label='$navLabel' WHERE id='$this->id'");
     }
 

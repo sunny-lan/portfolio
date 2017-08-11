@@ -65,7 +65,6 @@ $(function () {
             var element = article.previewElem;
             var top = element.offset().top,
                 bottom = top + element.height();
-            console.log('Top', top);
             if (top - errAllow >= viewStart && bottom <= viewEnd + errAllow)
                 article.navBarElem.addClass('selected');
             else

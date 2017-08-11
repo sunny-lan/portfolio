@@ -60,18 +60,18 @@ if (!$_GET["create"])
         <div class="line">
             <textarea id="previewText" title="previewText">
             <?php
-            if (isset($article)) echo $article->getPreview()
+            if (isset($article)) echo $article->getPreview();
             ?>
             </textarea>
         </div>
 
         <div class="line"> Content:</div>
         <div class="line">
-            <textarea id="contentText" title="contentText">
-             <?php
-             if (isset($article)) echo $article->getContent()
-             ?>
-            </textarea>
+<textarea id="contentText" title="contentText">
+ <?php
+ if (isset($article)) echo $article->getContent();
+ ?>
+</textarea>
         </div>
 
         <div class="line">
