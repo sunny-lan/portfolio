@@ -16,16 +16,21 @@ if (!$_GET["create"])
         $(function () {
             $("#saveBtn").click(function () {
                 $('#status').text("Saving...");
+                var submitParams = {
+                    content: $("#contentText").val(),
+                    preview: $("#previewText").val(),
+                    defaultDisplayOrder: $('#defaultDisplayOrder').val(),
+                    navLabel: $("#navLabel").val()
+                };
+                <?php
+                if (array_key_exists("create", $_GET))
+                    echo "submitParams.create=" . $_GET["create"] . ";";
+                if (array_key_exists("id", $_GET))
+                    echo "submitParams.articleID=" . $_GET["id"] . ";";
+                ?>
                 $.post(
                     "submit_article.php",
-                    $.param({
-                        create: <?php echo $_GET["create"]; ?>,
-                        articleID: <?php echo $_GET["id"]; ?>,
-                        content: $("#contentText").val(),
-                        preview: $("#previewText").val(),
-                        defaultDisplayOrder: $('#defaultDisplayOrder').val(),
-                        navLabel: $("#navLabel").val()
-                    }),
+                    $.param(submitParams),
                     function (data) {
                         if (data)
                             console.log(data);

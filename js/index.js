@@ -16,13 +16,13 @@ function performLayout(articles, orderFunc) {
         article.previewElem = $(
             "<div " +
             "id='article-preview-" + articleID + "' " +
-            "class='info-block'><div class='content'>" +
+            "class='info-block' style='order: " + orderFunc(article) + ";'><div class='content'>" +
             article.preview +
             "</div></div>");
         infoBlock.append(article.previewElem);
 
         article.navBarElem = $(
-            "<div id='nav-item-" + articleID + "' class='nav-item'>" +
+            "<div id='nav-item-" + articleID + "' class='nav-item' style='order: " + orderFunc(article) + ";'>" +
             article.navLabel +
             "</div>");
         navBar.append(article.navBarElem);
@@ -33,7 +33,9 @@ $(function () {
     //Load content:
     var schema = JSON.parse(document.getElementById('injected-schema').innerHTML);
     var articles = schema.articles;
-    performLayout(articles);
+    performLayout(articles, function (article) {
+        return article.defaultDisplayOrder;
+    });
 
     $('#name-block').addClass('selected');
 
@@ -59,7 +61,7 @@ $(function () {
 
         // Selected animations
         var errAllow = 50;
-        var viewStart = s  - errAllow,
+        var viewStart = s - errAllow,
             viewEnd = s + pgHeight + errAllow;
 
         // console.log("View start:", viewStart, "View end:", viewEnd);

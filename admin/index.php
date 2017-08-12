@@ -22,7 +22,7 @@
                 ?>
                 <tr>
                     <td><?php echo $id; ?></td>
-                    <td><?php echo $article->getNavLabel(); ?></td>
+                    <td><?php echo htmlspecialchars($article->getNavLabel()); ?></td>
                     <td>
                         <a href="edit.php?create=0&id=<?php echo $id; ?>">Edit</a>
                         <a href="submit_article.php?delete=1&articleID=<?php echo $id; ?>">Delete</a>

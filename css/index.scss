@@ -8,8 +8,6 @@ $sidebar-angle-scaled-closed: ($sidebar-closed / 100%) * $sidebar-angle;
 
 $animation-speed: 0.4s;
 
-$min: -10E50;
-
 #info-blocks {
   //constants for calculations
   $width-closed: (100% - $sidebar-closed) + $sidebar-angle-scaled-closed;
@@ -87,6 +85,9 @@ $min: -10E50;
     top: 40%; //default vertical position
     left: 50%;
     transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
 
     //animate it!
     transition: top $animation-speed ease;

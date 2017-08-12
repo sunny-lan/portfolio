@@ -49,6 +49,7 @@ class Article
         return [
             "preview" => $this->getPreview(),
             "navLabel" => $this->getNavLabel(),
+            "defaultDisplayOrder" => $this->getDefaultDisplayOrder(),
         ];
     }
 }
