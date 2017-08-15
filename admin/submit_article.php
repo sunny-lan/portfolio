@@ -1,4 +1,6 @@
-<?php require_once '../backend/include.php';
+<?php
+require_once '../backend/admin_include.php';
+
 header('Location: /admin');
 try {
     if ($_GET["delete"] == 1) {
@@ -15,3 +17,4 @@ try {
 } catch (Exception $ex) {
     echo "Error: $ex";
 }
+exit();

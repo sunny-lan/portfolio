@@ -1,4 +1,6 @@
-<?php require_once '../backend/include.php';
+<?php
+require_once '../backend/admin_include.php';
+
 if (!$_GET["create"])
     $article = $articleMgr->getArticle($_GET["id"]);
 ?>

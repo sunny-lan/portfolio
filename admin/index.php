@@ -1,4 +1,6 @@
-<?php require_once '../backend/include.php'; ?>
+<?php
+require_once '../backend/admin_include.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,6 +33,15 @@
             <?php } ?>
         </table>
         <a id="add-article" href="edit.php?create=1">Add article</a>
+        <br><br>
+        <form action="change_password.php" method="post">
+            Set password: <input title="password" name="password">
+            <input type="submit" value="Change password">
+        </form>
+        <br><br>
+        <a href="logout.php">Logout</a>
+        <br><br>
+        PHP Version: <?php echo phpversion(); ?>
     </div>
 </div>
 </body>

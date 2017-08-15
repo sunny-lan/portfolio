@@ -96,7 +96,7 @@
   //aesthetics
   white-space: nowrap; //don't wrap nav items (ugly)
   color: white; //since background is black
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   font-size: 20px;
 
   //fade in/out animations (only for landscape)
@@ -111,11 +111,16 @@
     transform: scale(1.1);
   }
 
-  &.selected, &:hover {
+  &.selected{
     @include selected;
   }
 
-  //make sure title is selected in vertical mode no matter what
+  &:hover:not(.top){
+    @include selected;
+    cursor: pointer;
+  }
+
+          //make sure title is selected in vertical mode no matter what
   @include vertical{
     &.top{
       @include selected;
