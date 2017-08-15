@@ -26,7 +26,7 @@ h1 {
 
 h2 {
   font-family: $secondary-font;
-  font-size: 24px;
+  font-size: 2px;
 }
 
 table {
@@ -64,12 +64,28 @@ button{
   align-items: $direction;
 }
 
+//responsive stuff
+$min-landscape-layout: 1100px;
+$max-vertical-layout: $min-landscape-layout - 1px;
+
+@mixin landscape {
+  @media (min-width: $min-landscape-layout) {
+    @content;
+  }
+}
+
+@mixin vertical {
+  @media (max-width: $max-vertical-layout) {
+    @content;
+  }
+}
+
 .background {
+  background-repeat: no-repeat;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-size: cover;
   z-index: -1;
 }

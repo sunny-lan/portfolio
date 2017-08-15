@@ -1,12 +1,19 @@
 @import "../base";
 
 #about-me {
-  height: 100vh;
+  @include landscape{
+    height: 100vh;
+  }
+  @include vertical{
+    height: 60vh;
+  }
+
   display: flex;
   flex-direction: column;
   text-align: right;
   align-items: flex-end;
   justify-content: center;
+
   .content {
     padding-right: 100px;
   }

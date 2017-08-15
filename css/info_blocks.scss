@@ -1,0 +1,55 @@
+@import "index_header";
+
+#info-blocks {
+  //constants for calculations
+  $width-closed: (100% - $sidebar-closed) + $sidebar-angle-scaled-closed;
+  $scale-to-page-closed: 100% / $width-closed;
+
+  position: absolute;
+  @include landscape {
+    //stick to the right
+    right: 0;
+    width: $width-closed;
+
+    //align all children to right, in columns
+    @include flex-columns(flex-end);
+  }
+
+  @include vertical {
+    top: $sidebar-height-vertical;
+    width: 100%;
+
+    //align all children to center, in columns
+    @include flex-columns(center);
+  }
+
+  //base for each info block - backgrounds should be placed in here
+  .info-block {
+    width: 100%; //make sure it takes up all the width
+    position: relative; //make sure child elements with absolute find it
+
+    //foreground
+    .content {
+      float: right;
+      @include landscape {
+        width: (100% - $sidebar-closed) * ($scale-to-page-closed);
+      }
+
+      @include vertical {
+        width: 100%;
+      }
+    }
+
+    //top class is injected into intro info block(s) by JS
+    &.top .content {
+      @include landscape {
+        width: (100% - $sidebar-open) * ($scale-to-page-closed);
+      }
+
+      @include vertical {
+        width: 100%;
+      }
+    }
+  }
+}
+

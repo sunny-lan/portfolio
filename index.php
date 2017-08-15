@@ -26,7 +26,7 @@
 <div id="info-blocks">
 </div>
 
-<div class="sidebar background">
+<div id="bg" class="sidebar">
     <div class="background"></div>
 </div>
 <div id="nav-bar-wrapper" class="sidebar">

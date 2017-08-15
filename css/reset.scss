@@ -47,6 +47,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
+  /*noinspection CssOverwrittenProperties*/
   content: '';
   content: none;
 }

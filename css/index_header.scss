@@ -1,0 +1,11 @@
+@import "base";
+
+$sidebar-open: 45%;
+$sidebar-closed: 35%;
+$sidebar-angle: 10%;
+
+$sidebar-angle-scaled-closed: ($sidebar-closed / 100%) * $sidebar-angle;
+
+$animation-speed: 0.4s;
+
+$sidebar-height-vertical: 80vh;

@@ -44,6 +44,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
+  /*noinspection CssOverwrittenProperties*/
   content: '';
   content: none; }
 
@@ -104,7 +105,7 @@ h1 {
 
 h2 {
   font-family: "Raleway", sans-serif;
-  font-size: 24px; }
+  font-size: 2px; }
 
 table {
   border-collapse: collapse; }
@@ -123,21 +124,26 @@ button {
     background: cornflowerblue; }
 
 .background {
+  background-repeat: no-repeat;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-size: cover;
   z-index: -1; }
 
 #about-me {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   text-align: right;
   align-items: flex-end;
   justify-content: center; }
+  @media (min-width: 1000px) {
+    #about-me {
+      height: 100vh; } }
+  @media (max-width: 999px) {
+    #about-me {
+      height: 60vh; } }
   #about-me .content {
     padding-right: 100px; }
   #about-me .background {

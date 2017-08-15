@@ -1,0 +1,121 @@
+@import "index_header";
+
+.sidebar {
+  @include landscape {
+    //fix on left side of page
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    //make slanted edge on right side
+    clip-path: polygon(
+                    0 0,
+                    100% 0,
+                    100% - $sidebar-angle 100%,
+                    0 100%);
+
+    //initial width
+    width: $sidebar-open;
+
+    //animate it!
+    transition: width $animation-speed ease;
+
+    &.closed {
+      width: $sidebar-closed;
+    }
+  }
+
+  @include vertical {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $sidebar-height-vertical;
+    width: 100%;
+
+    //make slanted edge on bottom
+    clip-path: polygon(
+                    0 0,
+                    100% 0,
+                    100% 100% - $sidebar-angle,
+                    0 100%);
+  }
+}
+
+//background layer of sidebar
+.sidebar#bg {
+  background: black;
+
+  //background picture layer
+  .background {
+    background-image: url('http://static3.businessinsider.com/image/58dbde7c77bb7050008b4ae9-1190-625/nasas-1-billion-jupiter-probe-just-sent-back-breathtaking-new-images-of-the-gas-giant.jpg');
+    //filter: blur(20px);
+
+    //animate top
+    transition: top $animation-speed ease;
+  }
+}
+
+//moving component
+.sidebar#nav-bar-wrapper {
+  //center content on landscape
+  @include vertical {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #nav-bar {
+    @include landscape {
+      //keep component where it is, unless modified by jQuery
+      position: absolute;
+      top: 40%; //default vertical position
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    //animate it!
+    transition: top $animation-speed ease;
+
+    //don't display nav stuff except for title on vertical
+    @include vertical {
+      & > :not(.top) {
+        display: none;
+      }
+    }
+  }
+}
+
+.nav-item {
+  //aesthetics
+  white-space: nowrap; //don't wrap nav items (ugly)
+  color: white; //since background is black
+  margin-bottom: 50px;
+  font-size: 20px;
+
+  //fade in/out animations (only for landscape)
+  transition: filter 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+  filter: blur(1px);
+  transform: scale(1);
+  opacity: 0.5;
+
+  @mixin selected{
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1.1);
+  }
+
+  &.selected, &:hover {
+    @include selected;
+  }
+
+  //make sure title is selected in vertical mode no matter what
+  @include vertical{
+    &.top{
+      @include selected;
+    }
+  }
+}
