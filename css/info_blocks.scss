@@ -1,9 +1,8 @@
 @import "index_header";
 
+
 #info-blocks {
-  //constants for calculations
-  $width-closed: (100% - $sidebar-closed) + $sidebar-angle-scaled-closed;
-  $scale-to-page-closed: 100% / $width-closed;
+
 
   position: absolute;
   @include landscape {

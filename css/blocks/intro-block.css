@@ -97,7 +97,8 @@ input, select {
   box-sizing: border-box !important; }
 
 body {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden; }
 
 h1 {
   font-family: "Raleway", sans-serif;
@@ -132,16 +133,23 @@ button {
   bottom: 0;
   z-index: -1; }
 
+@keyframes hover {
+  0% {
+    transform: translate(0, 0); }
+  50% {
+    transform: translate(0, -5px); }
+  100% {
+    transform: translate(0, 0); } }
 #about-me {
   display: flex;
   flex-direction: column;
   text-align: right;
   align-items: flex-end;
   justify-content: center; }
-  @media (min-width: 1000px) {
+  @media (min-width: 1100px) {
     #about-me {
       height: 100vh; } }
-  @media (max-width: 999px) {
+  @media (max-width: 1099px) {
     #about-me {
       height: 60vh; } }
   #about-me .content {

@@ -17,6 +17,8 @@ $large-font-size: 50px;
 
 body {
   font-family: $main-font;
+  //overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -88,4 +90,19 @@ $max-vertical-layout: $min-landscape-layout - 1px;
   right: 0;
   bottom: 0;
   z-index: -1;
+}
+
+
+@keyframes hover {
+  0%{
+    transform: translate(0, 0);
+  }
+
+  50%{
+    transform: translate(0, -5px);
+  }
+
+  100%{
+    transform: translate(0, 0);
+  }
 }

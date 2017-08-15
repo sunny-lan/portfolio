@@ -9,3 +9,7 @@ $sidebar-angle-scaled-closed: ($sidebar-closed / 100%) * $sidebar-angle;
 $animation-speed: 0.4s;
 
 $sidebar-height-vertical: 80vh;
+
+//constants for calculations
+$width-closed: (100% - $sidebar-closed) + $sidebar-angle-scaled-closed;
+$scale-to-page-closed: 100% / $width-closed;
