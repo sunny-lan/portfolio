@@ -45,7 +45,7 @@
     transform: scale(1.1);
     cursor: pointer;
     .arrow {
-      background: rgb(40, 10, 60);
+      background: $hover-color;
     }
   }
 }

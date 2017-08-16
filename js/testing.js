@@ -33,9 +33,9 @@ function performLayout(orderFunc) {
         article.previewElem = $(
             "<div " +
             "id='article-preview-" + articleID + "' " +
-            "class='info-block' style='order: " + order + ";'><div class='content'>" +
+            "class='info-block' style='order: " + order + ";'>" +
             article.preview +
-            "</div></div>");
+            "</div>");
         infoBlock.append(article.previewElem);
 
         //inject nav link into HTML
@@ -61,7 +61,7 @@ function scrollCalc() {
     //calculate scroll location
     var s = $(window).scrollTop(),
         pgHeight = $(window).height(),
-        h = $(document).height() - pgHeight;
+        h = Math.max($(document).height() - pgHeight, 1);
 
     //background image parallax
     $('.background.parallax').css('transform', 'translate(0, ' + s.map(0, h, 0, -10) + '%)');
@@ -104,19 +104,35 @@ function scrollCalc() {
 }
 
 function resizeCalc() {
+    //calculate responsive stuff
+    var width = $(document).width();
+    if (width < 1100) {
+        $(".content").css("width", "100%");
+    } else {
+        var navBarWidth = $('#nav-bar-wrapper').width();
+        $(".content").css("width", width - navBarWidth * 0.9);
+        $(".content.top").css("width", width - navBarWidth);
+    }
+
+    //only show scroll arrow when needed
     if ($(document).height() > $(window).height()) {
         $('.down-arrow').removeClass('hide');
         hideLock = false;
-        console.log("lol");
     }
     else {
         $('.down-arrow').addClass('hide');
         hideLock = true;
     }
+
+    console.log("resize");
+    //recalculate parallax, just in case
     scrollCalc();
 }
 
+var myStyle;
+
 $(function () {
+
     //Load content:
     var schema = JSON.parse(document.getElementById('injected-schema').innerHTML);
     articles = schema.articles;
@@ -139,7 +155,9 @@ $(function () {
         downArrow.addClass('hide');
 
     $(window).scroll(scrollCalc);
-    $(window).resize(resizeCalc);
+    $(window).resize(function () {
+        setTimeout(resizeCalc, 500);
+    });
 
     //ensure proper init calcs
     resizeCalc();

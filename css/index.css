@@ -21,6 +21,22 @@ Twitter: @rich_clark
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 @import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
 @import url("https://fonts.googleapis.com/css?family=Droid+Sans+Mono");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
+@import url("https://fonts.googleapis.com/css?family=Droid+Sans+Mono");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
+@import url("https://fonts.googleapis.com/css?family=Droid+Sans+Mono");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
+@import url("https://fonts.googleapis.com/css?family=Droid+Sans+Mono");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
+@import url("https://fonts.googleapis.com/css?family=Droid+Sans+Mono");
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -119,7 +135,7 @@ h1 {
 
 h2 {
   font-family: "Raleway", sans-serif;
-  font-size: 2px; }
+  font-size: 30px; }
 
 table {
   border-collapse: collapse; }
@@ -153,6 +169,20 @@ button {
     transform: translate(0, -5px); }
   100% {
     transform: translate(0, 0); } }
+.info-link {
+  display: flex;
+  align-items: center; }
+  .info-link .link-icon {
+    width: 40px;
+    height: 40px; }
+  .info-link .link-text {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    padding-left: 10px; }
+    .info-link .link-text:hover {
+      font-weight: bold; }
+
 /*
 html5doctor.com Reset Stylesheet
 v1.6.1
@@ -258,7 +288,7 @@ h1 {
 
 h2 {
   font-family: "Raleway", sans-serif;
-  font-size: 2px; }
+  font-size: 30px; }
 
 table {
   border-collapse: collapse; }
@@ -292,6 +322,20 @@ button {
     transform: translate(0, -5px); }
   100% {
     transform: translate(0, 0); } }
+.info-link {
+  display: flex;
+  align-items: center; }
+  .info-link .link-icon {
+    width: 40px;
+    height: 40px; }
+  .info-link .link-text {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    padding-left: 10px; }
+    .info-link .link-text:hover {
+      font-weight: bold; }
+
 @media (min-width: 1100px) {
   .sidebar {
     position: fixed;
@@ -339,6 +383,7 @@ button {
       display: none; } }
 
 .nav-item {
+  display: inline;
   white-space: nowrap;
   color: white;
   margin-bottom: 40px;
@@ -467,7 +512,7 @@ h1 {
 
 h2 {
   font-family: "Raleway", sans-serif;
-  font-size: 2px; }
+  font-size: 30px; }
 
 table {
   border-collapse: collapse; }
@@ -501,6 +546,20 @@ button {
     transform: translate(0, -5px); }
   100% {
     transform: translate(0, 0); } }
+.info-link {
+  display: flex;
+  align-items: center; }
+  .info-link .link-icon {
+    width: 40px;
+    height: 40px; }
+  .info-link .link-text {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    padding-left: 10px; }
+    .info-link .link-text:hover {
+      font-weight: bold; }
+
 #info-blocks {
   position: absolute; }
   @media (min-width: 1100px) {
@@ -522,20 +581,9 @@ button {
   #info-blocks .info-block {
     width: 100%;
     position: relative; }
-    #info-blocks .info-block .content {
-      float: right; }
-      @media (min-width: 1100px) {
-        #info-blocks .info-block .content {
-          width: 94.89051%; } }
-      @media (max-width: 1099px) {
-        #info-blocks .info-block .content {
-          width: 100%; } }
     @media (min-width: 1100px) {
-      #info-blocks .info-block.top .content {
-        width: 80.29197%; } }
-    @media (max-width: 1099px) {
-      #info-blocks .info-block.top .content {
-        width: 100%; } }
+      #info-blocks .info-block .content {
+        float: right; } }
 
 /*
 html5doctor.com Reset Stylesheet
@@ -642,7 +690,7 @@ h1 {
 
 h2 {
   font-family: "Raleway", sans-serif;
-  font-size: 2px; }
+  font-size: 30px; }
 
 table {
   border-collapse: collapse; }
@@ -676,6 +724,20 @@ button {
     transform: translate(0, -5px); }
   100% {
     transform: translate(0, 0); } }
+.info-link {
+  display: flex;
+  align-items: center; }
+  .info-link .link-icon {
+    width: 40px;
+    height: 40px; }
+  .info-link .link-text {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    padding-left: 10px; }
+    .info-link .link-text:hover {
+      font-weight: bold; }
+
 .down-arrow {
   display: flex;
   flex-direction: column;
@@ -709,5 +771,706 @@ button {
     cursor: pointer; }
     .down-arrow:hover .arrow {
       background: #280a3c; }
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-weight: normal; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  /*noinspection CssOverwrittenProperties*/
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+* {
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden; }
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px; }
+
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px; }
+
+table {
+  border-collapse: collapse; }
+
+table, th, td {
+  border: 1px solid black; }
+
+th, td {
+  padding: 10px; }
+
+button {
+  background: transparent;
+  border: solid;
+  font-size: 20px; }
+  button:hover {
+    background: cornflowerblue; }
+
+.background {
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; }
+
+@keyframes hover {
+  0% {
+    transform: translate(0, 0); }
+  50% {
+    transform: translate(0, -5px); }
+  100% {
+    transform: translate(0, 0); } }
+.info-link {
+  display: flex;
+  align-items: center; }
+  .info-link .link-icon {
+    width: 40px;
+    height: 40px; }
+  .info-link .link-text {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    padding-left: 10px; }
+    .info-link .link-text:hover {
+      font-weight: bold; }
+
+#intro-block .background {
+  top: -10%;
+  background: url("/img/memphis-colorful.png") repeat;
+  opacity: 0.5; }
+#intro-block .content {
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  #intro-block .content .question {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  #intro-block .content .answer {
+    font-family: "Raleway", sans-serif;
+    font-size: 30px;
+    max-width: 500px;
+    margin-bottom: 30px; }
+  #intro-block .content #links-header {
+    margin-top: 30px;
+    font-weight: bold; }
+  #intro-block .content #links {
+    font-family: "Raleway", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    #intro-block .content #links .info-link {
+      margin-top: 10px; }
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-weight: normal; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  /*noinspection CssOverwrittenProperties*/
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+* {
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden; }
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px; }
+
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px; }
+
+table {
+  border-collapse: collapse; }
+
+table, th, td {
+  border: 1px solid black; }
+
+th, td {
+  padding: 10px; }
+
+button {
+  background: transparent;
+  border: solid;
+  font-size: 20px; }
+  button:hover {
+    background: cornflowerblue; }
+
+.background {
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; }
+
+@keyframes hover {
+  0% {
+    transform: translate(0, 0); }
+  50% {
+    transform: translate(0, -5px); }
+  100% {
+    transform: translate(0, 0); } }
+.info-link {
+  display: flex;
+  align-items: center; }
+  .info-link .link-icon {
+    width: 40px;
+    height: 40px; }
+  .info-link .link-text {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    padding-left: 10px; }
+    .info-link .link-text:hover {
+      font-weight: bold; }
+
+#name-block-interactive {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 36px;
+  white-space: pre;
+  line-height: 50px;
+  /* 4px +12px + 4px */
+  padding-bottom: 50px; }
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-weight: normal; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  /*noinspection CssOverwrittenProperties*/
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+* {
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden; }
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px; }
+
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px; }
+
+table {
+  border-collapse: collapse; }
+
+table, th, td {
+  border: 1px solid black; }
+
+th, td {
+  padding: 10px; }
+
+button {
+  background: transparent;
+  border: solid;
+  font-size: 20px; }
+  button:hover {
+    background: cornflowerblue; }
+
+.background {
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; }
+
+@keyframes hover {
+  0% {
+    transform: translate(0, 0); }
+  50% {
+    transform: translate(0, -5px); }
+  100% {
+    transform: translate(0, 0); } }
+.info-link {
+  display: flex;
+  align-items: center; }
+  .info-link .link-icon {
+    width: 40px;
+    height: 40px; }
+  .info-link .link-text {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    padding-left: 10px; }
+    .info-link .link-text:hover {
+      font-weight: bold; }
+
+#about-me .background {
+  background: url("/img/html-color-codes-color-tutorials-hero-00e10b1f.jpg"); }
+#about-me .content {
+  min-height: 500px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
+  #about-me .content #skills-table {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-family: "Raleway", sans-serif; }
+  #about-me .content table, #about-me .content th, #about-me .content td {
+    border: none; }
+  #about-me .content td {
+    width: 200px;
+    height: 60px;
+    margin: 10px; }
+  #about-me .content .hover-item.selected {
+    font-weight: bold; }
+  #about-me .content .hover-item .tooltip {
+    display: none; }
+  #about-me .content #hover-header {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 26px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    #about-me .content #hover-header .sub-header {
+      font-size: 12px; }
+    #about-me .content #hover-header a {
+      text-decoration: none; }
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-weight: normal; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  /*noinspection CssOverwrittenProperties*/
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+* {
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden; }
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px; }
+
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px; }
+
+table {
+  border-collapse: collapse; }
+
+table, th, td {
+  border: 1px solid black; }
+
+th, td {
+  padding: 10px; }
+
+button {
+  background: transparent;
+  border: solid;
+  font-size: 20px; }
+  button:hover {
+    background: cornflowerblue; }
+
+.background {
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; }
+
+@keyframes hover {
+  0% {
+    transform: translate(0, 0); }
+  50% {
+    transform: translate(0, -5px); }
+  100% {
+    transform: translate(0, 0); } }
+.info-link {
+  display: flex;
+  align-items: center; }
+  .info-link .link-icon {
+    width: 40px;
+    height: 40px; }
+  .info-link .link-text {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    padding-left: 10px; }
+    .info-link .link-text:hover {
+      font-weight: bold; }
+
+#end-block {
+  background: #006064;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  height: 100px; }
+  #end-block .content {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px; }
 
 /*# sourceMappingURL=index.css.map */

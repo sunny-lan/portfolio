@@ -1,0 +1,16 @@
+@import "../base";
+
+#end-block{
+  background: #006064;
+  color: white;
+
+  font-family: $secondary-font;
+  font-size: 30px;
+  height: 100px;
+
+  .content{
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+  }
+}

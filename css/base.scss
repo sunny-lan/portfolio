@@ -8,6 +8,8 @@ $main-font: 'Open Sans', sans-serif;
 $secondary-font: 'Raleway', sans-serif;
 $code-font: 'Ubuntu Mono', monospace;
 
+$hover-color: rgb(40, 10, 60);
+
 $large-font-size: 50px;
 
 * {
@@ -29,7 +31,7 @@ h1 {
 
 h2 {
   font-family: $secondary-font;
-  font-size: 2px;
+  font-size: 30px;
 }
 
 table {
@@ -105,5 +107,23 @@ $max-vertical-layout: $min-landscape-layout - 1px;
 
   100%{
     transform: translate(0, 0);
+  }
+}
+
+.info-link {
+  display: flex;
+  align-items: center;
+  .link-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .link-text {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    padding-left: 10px;
+    &:hover{
+      font-weight: bold;
+    }
   }
 }

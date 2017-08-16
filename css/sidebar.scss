@@ -93,6 +93,8 @@
 }
 
 .nav-item {
+  display: inline;
+
   //aesthetics
   white-space: nowrap; //don't wrap nav items (ugly)
   color: white; //since background is black

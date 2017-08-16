@@ -107,7 +107,7 @@ h1 {
 
 h2 {
   font-family: "Raleway", sans-serif;
-  font-size: 2px; }
+  font-size: 30px; }
 
 table {
   border-collapse: collapse; }
@@ -141,6 +141,20 @@ button {
     transform: translate(0, -5px); }
   100% {
     transform: translate(0, 0); } }
+.info-link {
+  display: flex;
+  align-items: center; }
+  .info-link .link-icon {
+    width: 40px;
+    height: 40px; }
+  .info-link .link-text {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    padding-left: 10px; }
+    .info-link .link-text:hover {
+      font-weight: bold; }
+
 .container {
   position: absolute;
   top: 0;

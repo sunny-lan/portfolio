@@ -7,12 +7,11 @@ var articles;
 
 function performLayout(orderFunc) {
     var infoBlock = $('#info-blocks');
+    var navBar = $("#nav-bar");
 
     //clear old elements
     infoBlock.empty();
-    $('#nav-bar*').empty();
-
-    var navBar = $("#nav-bar");
+    navBar.empty();
 
     var topMostArticleID = null;
     var minOrder = Number.MAX_VALUE;
@@ -33,9 +32,11 @@ function performLayout(orderFunc) {
         article.previewElem = $(
             "<div " +
             "id='article-preview-" + articleID + "' " +
-            "class='info-block' style='order: " + order + ";'><div class='content'>" +
+            "class='info-block' style='order: " + order + ";'>" +
             article.preview +
-            "</div></div>");
+            "</div>");
+
+        console.log(article.previewElem);
         infoBlock.append(article.previewElem);
 
         //inject nav link into HTML
@@ -61,7 +62,7 @@ function scrollCalc() {
     //calculate scroll location
     var s = $(window).scrollTop(),
         pgHeight = $(window).height(),
-        h = $(document).height() - pgHeight;
+        h = Math.max($(document).height() - pgHeight, 1);
 
     //background image parallax
     $('.background.parallax').css('transform', 'translate(0, ' + s.map(0, h, 0, -10) + '%)');
@@ -104,19 +105,33 @@ function scrollCalc() {
 }
 
 function resizeCalc() {
+    //calculate responsive stuff
+    var width = $(document).width();
+    if (width < 1100) {
+        $(".content").css("width", "100%");
+    } else {
+        var navBarWidth = $('#nav-bar-wrapper').width();
+        console.log(navBarWidth);
+        $(".content").css("width", width - navBarWidth * 0.9);
+        $(".top .content").css("width", width - navBarWidth);
+    }
+
+    //only show scroll arrow when needed
     if ($(document).height() > $(window).height()) {
         $('.down-arrow').removeClass('hide');
         hideLock = false;
-        console.log("lol");
     }
     else {
         $('.down-arrow').addClass('hide');
         hideLock = true;
     }
+
+    //recalculate parallax, just in case
     scrollCalc();
 }
 
 $(function () {
+
     //Load content:
     var schema = JSON.parse(document.getElementById('injected-schema').innerHTML);
     articles = schema.articles;
@@ -131,7 +146,7 @@ $(function () {
     downArrow.click(function () {
         var elem = $('.info-block.top');
         $('html, body').animate({
-            scrollTop: elem.offset().top + elem.height()
+            scrollTop: elem.offset().top + ( $(document).width() < 1100 ? 0 : elem.height())
         }, 1000, "easeOutQuad");
     });
 
@@ -139,7 +154,9 @@ $(function () {
         downArrow.addClass('hide');
 
     $(window).scroll(scrollCalc);
-    $(window).resize(resizeCalc);
+    $(window).resize(function () {
+        setTimeout(resizeCalc, 500);
+    });
 
     //ensure proper init calcs
     resizeCalc();

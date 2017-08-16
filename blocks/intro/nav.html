@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script
+            src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/blocks/intro/navlink.css">
+</head>
+<body>
+
+<script src="/js/typewriter.js"></script>
+<script>
+    $(function () {
+        var typewriter = new Typewriter($("#name-block-interactive"));
+        typewriter.setCaret("_");
+        typewriter.setCaretPeriod(500);
+        typewriter.setDelay(75, 25);
+
+        var sequence = [
+//                        {
+////                          text: "                        \n"  ,
+//                            instant:true
+//                        },
+            {
+                text: "$ Hi! My name is SUNNY\n$ ",
+                instant: true,
+                delayAfter: 3000
+            },
+            {
+                text: "I like COFFE\b\b\b\b\bPROGRAMMING",
+                delayAfter: 3000
+            },
+            {
+                text: "\nYup."
+            }
+        ];
+        typewriter.playSequence(sequence);
+    });
+</script>
+<div id="name-block-interactive"></div>
+
+</body>
+</html>

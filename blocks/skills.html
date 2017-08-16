@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script
+            src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/blocks/skills.css">
+</head>
+<body>
+
+<div id="about-me">
+    <script>
+        $(function () {
+            $.fn.random = function () {
+                return this.eq(Math.floor(Math.random() * this.length));
+            };
+            var original = $("#hover-header").html();
+            $(".hover-item").each(function (index, value) {
+                value = $(value);
+                value.hover(function () {
+                    $(".hover-item").removeClass("selected");
+                    $("#hover-header").html(value.children(".tooltip").random().html());
+                    value.addClass("selected");
+                }, function () {
+                })
+            });
+        });
+    </script>
+    <div class="background"></div>
+    <div class="content">
+        <h1>My skills!</h1>
+        <div id="hover-header">
+            <div class="sub-header">(Hover over them to find out more!)</div>
+        </div>
+        <table id="skills-table">
+            <tr>
+                <td class="hover-item">Java
+                    <div class="tooltip">My very first language ❤</div>
+                    <div class="tooltip">Happily together for 4 years</div>
+                </td>
+                <td class="hover-item">Python
+                    <div class="tooltip">My very first Python program was a neural network :D</div>
+                    <div class="tooltip"><a href="https://www.tensorflow.org/">TensorFlow 🔥</a></div>
+                </td>
+                <td class="hover-item">C++
+                    <div class="tooltip">I mainly use it for contest programming</div>
+                    <div class="tooltip">Soooo fast 🏎</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="hover-item">React.js
+                    <div class="tooltip">It's a love-hate relationship</div>
+                </td>
+                <td class="hover-item">PHP
+                    <div class="tooltip">Ugh.</div>
+                </td>
+                <td class="hover-item">MySQL
+                    <div class="tooltip">I'd prefer MongoDB :(</div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="hover-item">...
+                    <div class="tooltip">
+                        Currently, I'm learning about
+                        Sass, Node.js, and MongoDB
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

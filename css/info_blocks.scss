@@ -2,8 +2,6 @@
 
 
 #info-blocks {
-
-
   position: absolute;
   @include landscape {
     //stick to the right
@@ -28,25 +26,9 @@
     position: relative; //make sure child elements with absolute find it
 
     //foreground
-    .content {
-      float: right;
-      @include landscape {
-        width: (100% - $sidebar-closed) * ($scale-to-page-closed);
-      }
-
-      @include vertical {
-        width: 100%;
-      }
-    }
-
-    //top class is injected into intro info block(s) by JS
-    &.top .content {
-      @include landscape {
-        width: (100% - $sidebar-open) * ($scale-to-page-closed);
-      }
-
-      @include vertical {
-        width: 100%;
+    @include landscape {
+      .content {
+        float: right;
       }
     }
   }
