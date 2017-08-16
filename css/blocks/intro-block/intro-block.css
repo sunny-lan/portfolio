@@ -8,6 +8,7 @@ Twitter: @rich_clark
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 @import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
+@import url("https://fonts.googleapis.com/css?family=Droid+Sans+Mono");
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -151,12 +152,13 @@ button {
       height: 100vh; } }
   @media (max-width: 1099px) {
     #about-me {
-      height: 60vh; } }
+      height: 80vh; } }
   #about-me .content {
     padding-right: 100px; }
   #about-me .background {
-    background-image: url("/img/paper_dents_texture_76553_1920x1080.jpg");
-    opacity: 0.1; }
+    top: -10%;
+    background: url("/img/memphis-colorful.png") repeat;
+    opacity: 0.5; }
   #about-me .about-text {
     width: 500px;
     display: block;
@@ -180,15 +182,5 @@ button {
     #about-me .github-link .github-text {
       font-weight: bold;
       padding-left: 10px; }
-
-#name-block {
-  display: flex;
-  flex-direction: column;
-  font-family: "Raleway", sans-serif; }
-  #name-block .greeting-text {
-    font-size: 60px; }
-  #name-block .name-text {
-    padding-top: 5px;
-    font-size: 40px; }
 
 /*# sourceMappingURL=intro-block.css.map */

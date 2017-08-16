@@ -45,7 +45,6 @@
 </div>
 
 <div class="down-arrow">
-    <!--<span class="text">Scroll down</span>-->
     <div class="material-icons arrow">expand_more</div>
 </div>
 

@@ -48,8 +48,8 @@
 
   //background picture layer
   .background {
-    background-image: url('http://static3.businessinsider.com/image/58dbde7c77bb7050008b4ae9-1190-625/nasas-1-billion-jupiter-probe-just-sent-back-breathtaking-new-images-of-the-gas-giant.jpg');
-    filter: blur(20px);
+    filter: invert(100%);
+    background: url('/img/memphis-colorful.png') repeat;
     //position: fixed;
     //@include vertical {
     //  height: $sidebar-height-vertical;

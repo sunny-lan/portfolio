@@ -27,6 +27,8 @@
     animation: hover;
     animation-iteration-count: infinite;
     animation-duration: 1.5s;
+    background: rgb(10, 10, 10);
+    color: white;
   }
 
   transition: opacity $animation-speed ease, transform $animation-speed ease, background $animation-speed ease;
@@ -37,13 +39,13 @@
     opacity: 0;
   }
 
+
   //hover animation
   &:hover {
     transform: scale(1.1);
     cursor: pointer;
     .arrow {
-      background: rgba(0, 0, 0, .9);
-      color: white;
+      background: rgb(40, 10, 60);
     }
   }
 }

@@ -8,15 +8,19 @@ Twitter: @rich_clark
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 @import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
+@import url("https://fonts.googleapis.com/css?family=Droid+Sans+Mono");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 @import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
+@import url("https://fonts.googleapis.com/css?family=Droid+Sans+Mono");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 @import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
+@import url("https://fonts.googleapis.com/css?family=Droid+Sans+Mono");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 @import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
+@import url("https://fonts.googleapis.com/css?family=Droid+Sans+Mono");
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -311,8 +315,8 @@ button {
 .sidebar#bg {
   background: black; }
   .sidebar#bg .background {
-    background-image: url("http://static3.businessinsider.com/image/58dbde7c77bb7050008b4ae9-1190-625/nasas-1-billion-jupiter-probe-just-sent-back-breathtaking-new-images-of-the-gas-giant.jpg");
-    filter: blur(20px);
+    filter: invert(100%);
+    background: url("/img/memphis-colorful.png") repeat;
     transition: top 0.4s ease; }
 
 @media (max-width: 1099px) {
@@ -694,7 +698,9 @@ button {
     font-size: 70px;
     animation: hover;
     animation-iteration-count: infinite;
-    animation-duration: 1.5s; }
+    animation-duration: 1.5s;
+    background: #0a0a0a;
+    color: white; }
   .down-arrow.hide {
     transform: scale(0);
     opacity: 0; }
@@ -702,7 +708,6 @@ button {
     transform: scale(1.1);
     cursor: pointer; }
     .down-arrow:hover .arrow {
-      background: rgba(0, 0, 0, 0.9);
-      color: white; }
+      background: #280a3c; }
 
 /*# sourceMappingURL=index.css.map */

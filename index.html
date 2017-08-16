@@ -15,24 +15,11 @@
             integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
             crossorigin="anonymous"></script>
 
-    <script src="/js/index.js"></script>
+    <script src="/js/testing.js"></script>
 
 
     <script type='application/json' id='injected-schema'>
-        {
-            "articles": {
-                "34": {
-                    "preview": "<style scoped>\n#about-me {\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n  text-align: right;\n  align-items: flex-end;\n  justify-content: center; }\n  #about-me .content {\n    padding-right: 100px; }\n  #about-me .background {\n    background-image: url(\"\/img\/paper_dents_texture_76553_1920x1080.jpg\");\n    opacity: 0.1; }\n  #about-me .about-text {\n    width: 500px;\n    display: block;\n    float: right;\n    clear: right; }\n  #about-me .about-header {\n    margin-bottom: 10px;\n    display: inline-block;\n    float: right; }\n  #about-me .github-link {\n    display: flex;\n    justify-content: flex-end;\n    align-items: center;\n    margin-top: 40px;\n    clear: right;\n    float: right; }\n    #about-me .github-link .github-icon {\n      width: 40px;\n      height: 40px;\n      float: left; }\n    #about-me .github-link .github-text {\n      font-weight: bold;\n      padding-left: 10px; }\n\n\/*# sourceMappingURL=intro-block.css.map *\/\n\n<\/style>\n<div id=\"about-me\">\n        <div class=\"background\"><\/div>\n        <div class=\"content top\">\n            <h1 class=\"about-header\">About me<\/h1>\n            <p class=\"about-text\">\n                Man request adapted spirits set pressed. Up to denoting subjects sensible feelings it indulged\n                directly. We dwelling elegance do shutters appetite yourself diverted. Our next drew much you with rank.\n                Tore many held age old rose than our. She literature sentiments any contrasted. Set aware joy sense\n                young now years china shy.\n                I am a custy boi.\n            <\/p>\n            <a class=\"github-link\">\n                <img class=\"github-icon\" src=\"img\/GitHub-Mark.png\">\n                <span class=\"github-text\">github.com\/sunny-lan<\/span>\n            <\/a>\n        <\/div>\n    <\/div>",
-                    "navLabel": "<style scoped>\n#name-block {\n  display: flex;\n  flex-direction: column;\n  font-family: \"Raleway\", sans-serif; }\n  #name-block .greeting-text {\n    font-size: 60px; }\n  #name-block .name-text {\n    padding-top: 5px;\n    font-size: 40px; }\n<\/style>\n<div id=\"name-block\">\n            <span class=\"greeting-text\">Hello,<\/span>\n            <span class=\"name-text\"><span class=\"prompt\">><\/span> I'm Sunny Lan<\/span>\n        <\/div>",
-                    "defaultDisplayOrder": "0"
-                },
-                "35": {
-                    "preview": "<div style='height: 400px;'><div class='background' style='background: red;'><\/div>test<\/div>",
-                    "navLabel": "Article 1",
-                    "defaultDisplayOrder": "1"
-                }
-            }
-        }
+        {}
     </script>
 
 </head>
@@ -40,6 +27,32 @@
 <body>
 
 <div id="info-blocks">
+    <div id="article-preview-34" class="info-block top" style="order: 0;">
+        <div class="content">
+            <style scoped="">
+                @import "css/blocks/intro-block/intro-block.css";
+            </style>
+            <div id="about-me">
+                <div class="background"></div>
+                <div class="content top">
+                    <h1 class="about-header">About me</h1>
+                    <p class="about-text">
+                        Man requestcc adapted spirits set pressed. Up to denoting subjects sensible feelings it indulged
+                        directly. We dwelling elegance do shutters appetite yourself diverted. Our next drew much you
+                        with rank.
+                        Tore many held age old rose than our. She literature sentiments any contrasted. Set aware joy
+                        sense
+                        young now years china shy.
+                        I am a custy boi.
+                    </p>
+                    <a class="github-link">
+                        <img class="github-icon" src="img/GitHub-Mark.png">
+                        <span class="github-text">github.com/sunny-lan</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div id="bg" class="sidebar">
@@ -47,11 +60,44 @@
 </div>
 <div id="nav-bar-wrapper" class="sidebar">
     <div id="nav-bar">
+        <div id="nav-item-34" class="nav-item top selected" style="order: 0;">
+            <style scoped="">
+                @import "css/blocks/intro-block/navlink.css";
+            </style>
+            <script src="/js/typewriter.js"></script>
+            <script>
+                $(function () {
+                    var typewriter = new Typewriter($("#name-block-interactive"));
+                    typewriter.setCaret("_");
+                    typewriter.setCaretPeriod(500);
+                    typewriter.setDelay(75, 25);
+
+                    var sequence = [
+//                        {
+////                          text: "                        \n"  ,
+//                            instant:true
+//                        },
+                        {
+                            text: "$ Hi! My name is SUNNY\n$ ",
+                            delayAfter: 3000
+                        },
+                        {
+                            text: "I like COFFE\b\b\b\b\bPROGRAMMING",
+                            delayAfter: 3000
+                        },
+                        {
+                            text: "\nYup."
+                        }
+                    ];
+                    typewriter.playSequence(sequence);
+                });
+            </script>
+            <div id="name-block-interactive"></div>
+        </div>
     </div>
 </div>
 
 <div class="down-arrow">
-    <!--<span class="text">Scroll down</span>-->
     <div class="material-icons arrow">expand_more</div>
 </div>
 

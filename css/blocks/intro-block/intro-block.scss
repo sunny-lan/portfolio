@@ -1,11 +1,11 @@
-@import "../base";
+@import "../../base";
 
 #about-me {
   @include landscape{
     height: 100vh;
   }
   @include vertical{
-    height: 60vh;
+    height: 80vh;
   }
 
   display: flex;
@@ -19,8 +19,10 @@
   }
 
   .background {
-    background-image: url('/img/paper_dents_texture_76553_1920x1080.jpg');
-    opacity: 0.1;
+    top: -10%;
+    background: url('/img/memphis-colorful.png') repeat;
+    opacity: 0.5;
+    //filter: blur(10px);
   }
 
   .about-text {
@@ -51,18 +53,5 @@
       font-weight: bold;
       padding-left: 10px;
     }
-  }
-}
-
-#name-block {
-  display: flex;
-  flex-direction: column;
-  font-family: $secondary-font;
-  .greeting-text {
-    font-size: 60px;
-  }
-  .name-text {
-    padding-top: 5px;
-    font-size: 40px;
   }
 }

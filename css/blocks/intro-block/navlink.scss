@@ -1,0 +1,13 @@
+@import "../../base";
+
+#name-block-interactive {
+  font-family: $code-font;
+  font-size: 36px;
+  //min-width: 450px;
+  //max-width: 450px;
+  white-space: pre;
+  //color: lightgrey;
+  line-height: 50px; /* 4px +12px + 4px */
+  //margin-right: 50px;
+  padding-bottom: 50px;
+}
