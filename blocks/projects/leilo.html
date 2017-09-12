@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script
+            src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="leilo-block">
+    <div class="background"></div>
+    <div class="content">
+        <h1 class="project-title">Leilo - A simple IoT platform</h1>
+        <span class="project-builtwith">
+            <strong>Built with:</strong> PHP/MySQL, ReactJS, C++ and ESP8266
+        </span>
+        <div class="project-description">
+            <span class="project-intro">
+                Leilo is a simple, open sourced, platform that lets users to connect sensors to the internet. Leilo is composed of 3 components:
+            </span>
+            <ul class="project-features">
+                <li class="project-feature"><strong>Sensor & sensor software</strong> - The sensor hardware is built
+                    around
+                    the ESP8266,
+                    an Wifi-enabled chip. The software regularly reads and uploads sensor values to the API.
+                    Sensors are interchangeable as the sensor board has a simple sensor interface.
+                </li>
+                <li class="project-feature"><strong>API/backend</strong> - The backend is written in PHP and stores
+                    sensor
+                    values in a MySQL
+                    database. The API uses a simple JSON format to transfer data. A NodeJS WebSocket overhaul of the
+                    backend
+                    is being currently being written.
+                </li>
+                <li class="project-feature"><strong>Webapp user interface</strong> - Made with ReactJS, the frontend
+                    receives live updates from the server,
+                    and displays data on a dashboard. The dashboard is easily customizable, allowing users to drag and
+                    drop
+                    customized widgets. In addition, the complete configuration of the dashboard remains synchronized
+                    across
+                    browsers.
+                </li>
+            </ul>
+        </div>
+        <div class="project-links">
+            <div class="info-link">
+                <img class="link-icon" src="/img/github-icon.png">
+                <a class="link-text" href="https://github.com/Loleilo">github.com/Loleilo</a>
+            </div>
+            <div class="info-link">
+                <img class="link-icon" src="/img/link-icon.png">
+                <a class="link-text" href="http://leilo.ml">leilo.ml</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

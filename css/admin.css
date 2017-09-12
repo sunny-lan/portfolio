@@ -9,6 +9,7 @@ Twitter: @rich_clark
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 @import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
 @import url("https://fonts.googleapis.com/css?family=Droid+Sans+Mono");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300");
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -102,11 +103,11 @@ body {
   overflow-x: hidden; }
 
 h1 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 50px; }
 
 h2 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 30px; }
 
 table {

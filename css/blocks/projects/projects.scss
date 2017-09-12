@@ -1,0 +1,38 @@
+@import "header-block";
+@import "leilo/leilo";
+
+.project-title{
+  margin-bottom: 10px;
+}
+
+.project-builtwith{
+  display: block;
+  margin-bottom: 5px;
+}
+
+.project-description{
+  line-height: 20px;
+
+  .project-intro{
+    color: #00b2cc;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .project-features{
+    margin-left: 20px;
+    max-width: 90%;
+    .project-feature{
+      padding-bottom: 5px;
+    }
+  }
+}
+
+.project-links{
+  margin-top: 10px;
+  .info-link{
+    margin-bottom: 5px;
+  }
+}

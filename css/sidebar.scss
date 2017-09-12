@@ -49,13 +49,10 @@
   //background picture layer
   .background {
     filter: invert(100%);
-    background: url('/img/memphis-colorful.png') repeat;
-    //position: fixed;
-    //@include vertical {
-    //  height: $sidebar-height-vertical;
-    //}
-    //animate top
-    transition: top $animation-speed ease;
+    background: url('/img/shapes-bg.png') repeat ;
+    bottom: -500px;
+
+    transition: top $animation-speed ease, left $animation-speed ease;
   }
 }
 
@@ -99,32 +96,40 @@
   white-space: nowrap; //don't wrap nav items (ugly)
   color: white; //since background is black
   margin-bottom: 40px;
-  font-size: 20px;
+  &.top{
+    margin-bottom: 60px;
+  }
+  font-size: 26px;
+  font-family: $secondary-font;
 
   //fade in/out animations (only for landscape)
   transition: filter 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
-  filter: blur(1px);
+  //filter: blur(1px);
   transform: scale(1);
   opacity: 0.5;
 
-  @mixin selected{
+  //&:not(.top) {
+  //  padding-left: 30px;
+  //}
+
+  @mixin selected {
     opacity: 1;
-    filter: blur(0);
+    //filter: blur(0);
     transform: scale(1.1);
   }
 
-  &.selected{
+  &.selected {
     @include selected;
   }
 
-  &:hover:not(.top){
+  &:hover:not(.top) {
     @include selected;
     cursor: pointer;
   }
 
-          //make sure title is selected in vertical mode no matter what
-  @include vertical{
-    &.top{
+  //make sure title is selected in vertical mode no matter what
+  @include vertical {
+    &.top {
       @include selected;
     }
   }

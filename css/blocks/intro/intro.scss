@@ -5,7 +5,7 @@
     //make sure angle part of sidebar remains covered
     top: -10%;
 
-    background: url('/img/memphis-colorful.png') repeat;
+    background: url('/img/shapes-bg.png') repeat;
     opacity: 0.5;
   }
 
@@ -33,7 +33,7 @@
     }
 
     .answer {
-      font-family: $secondary-font;
+      font-family: $main-font;
       font-size: 30px;
 
       //limit width for readability
@@ -50,8 +50,7 @@
 
     #links {
       //separate links from rest of stuff
-      font-family: $secondary-font;
-
+      font-family: $main-font;
       //left align
       display: flex;
       flex-direction: column;

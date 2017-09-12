@@ -1,0 +1,18 @@
+@import "../../index_header";
+
+#project-header-block {
+  font-size: 30px;
+  $height: 200px;
+  height: $height;
+  .background {
+    background: #fff3e0;
+  }
+
+  .content{
+    color: black;
+    font-family: $secondary-font;
+    //text-align: center;
+    vertical-align: middle;
+    line-height: $height;
+  }
+}

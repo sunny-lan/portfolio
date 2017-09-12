@@ -97,9 +97,11 @@ function scrollCalc() {
 
         // console.log("top: ", top, "bottom: ", bottom);
 
-        if (top >= viewStart && bottom <= viewEnd)
+        if (top >= viewStart && bottom <= viewEnd) {
             article.navBarElem.addClass('selected');
-        else
+            console.log(article.navBarElem.offset().left);
+            // $('#nav-bar').css("left", 100-article.navBarElem.offset().left + "px");
+        } else
             article.navBarElem.removeClass('selected');
     }
 }
@@ -111,7 +113,6 @@ function resizeCalc() {
         $(".content").css("width", "100%");
     } else {
         var navBarWidth = $('#nav-bar-wrapper').width();
-        console.log(navBarWidth);
         $(".content").css("width", width - navBarWidth * 0.9);
         $(".top .content").css("width", width - navBarWidth);
     }

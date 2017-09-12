@@ -18,36 +18,40 @@
 </head>
 <body>
 
-<script src="/js/typewriter.js"></script>
-<script>
-    $(function () {
-        var typewriter = new Typewriter($("#name-block-interactive"));
-        typewriter.setCaret("_");
-        typewriter.setCaretPeriod(500);
-        typewriter.setDelay(75, 25);
+<!--<script src="/js/typewriter.js"></script>-->
+<!--<script>-->
+    <!--$(function () {-->
+        <!--var typewriter = new Typewriter($("#name-block-interactive"));-->
+        <!--typewriter.setCaret("_");-->
+        <!--typewriter.setCaretPeriod(500);-->
+        <!--typewriter.setDelay(75, 25);-->
 
-        var sequence = [
-//                        {
-////                          text: "                        \n"  ,
-//                            instant:true
-//                        },
-            {
-                text: "$ Hi! My name is SUNNY\n$ ",
-                instant: true,
-                delayAfter: 3000
-            },
-            {
-                text: "I like COFFE\b\b\b\b\bPROGRAMMING",
-                delayAfter: 3000
-            },
-            {
-                text: "\nYup."
-            }
-        ];
-        typewriter.playSequence(sequence);
-    });
-</script>
-<div id="name-block-interactive"></div>
+        <!--var sequence = [-->
+<!--//                        {-->
+<!--////                          text: "                        \n"  ,-->
+<!--//                            instant:true-->
+<!--//                        },-->
+            <!--{-->
+                <!--text: "$ Hi! My name is SUNNY\n$ ",-->
+                <!--instant: true,-->
+                <!--delayAfter: 3000-->
+            <!--},-->
+            <!--{-->
+                <!--text: "I like COFFE\b\b\b\b\bPROGRAMMING",-->
+                <!--delayAfter: 3000-->
+            <!--},-->
+            <!--{-->
+                <!--text: "\nYup."-->
+            <!--}-->
+        <!--];-->
+        <!--typewriter.playSequence(sequence);-->
+    <!--});-->
+<!--</script>-->
+<!--<div id="name-block-interactive"></div>-->
+<div class="name-block">
+    <span class="greeting-text">Hello,</span>
+    <span class="name-text"><span class="prompt">></span> I'm Sunny Lan</span>
+</div>
 
 </body>
 </html>

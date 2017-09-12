@@ -1,13 +1,27 @@
 @import "../../base";
 
-#name-block-interactive {
-  font-family: $code-font;
-  font-size: 36px;
-  //min-width: 450px;
-  //max-width: 450px;
-  white-space: pre;
-  //color: lightgrey;
-  line-height: 50px; /* 4px +12px + 4px */
-  //margin-right: 50px;
-  padding-bottom: 50px;
+//#name-block-interactive {
+//  text-align: left;
+//  font-family: $code-font;
+//  font-size: 36px;
+//
+//  white-space: pre;
+//
+//  line-height: 50px;
+//  height: 150px;
+//
+//  padding-bottom: 30px;
+//}
+
+.name-block {
+  display: flex;
+  flex-direction: column;
+  font-family: $secondary-font;
+  .greeting-text {
+    font-size: 60px;
+  }
+  .name-text {
+    padding-top: 5px;
+    font-size: 40px;
+  }
 }
