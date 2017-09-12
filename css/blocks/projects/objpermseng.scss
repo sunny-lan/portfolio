@@ -1,0 +1,26 @@
+#objpermseng-block {
+
+  min-height: 550px;
+
+  .background {
+    background: url("/img/water-bg.jpeg") fixed left;
+    background-size: cover;
+    filter: brightness(50%);
+    //opacity: 0.5;
+  }
+
+  .content {
+    color: rgb(230, 230, 230);
+    background: rgba(0, 3, 7, 0.6);
+  }
+
+  .info-link {
+    .link-icon {
+      filter: invert(100%);
+    }
+
+    .link-text {
+      color: white;
+    }
+  }
+}

@@ -9,10 +9,13 @@
   }
 
   .content{
+    min-width: 100%;
     color: black;
     font-family: $secondary-font;
-    //text-align: center;
+    text-align: center;
     vertical-align: middle;
     line-height: $height;
+
+    //padding-left: 100px;
   }
 }

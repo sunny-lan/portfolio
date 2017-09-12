@@ -1,38 +1,55 @@
 @import "header-block";
-@import "leilo/leilo";
 
-.project-title{
-  margin-bottom: 10px;
-}
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-.project-builtwith{
-  display: block;
-  margin-bottom: 5px;
-}
-
-.project-description{
-  line-height: 20px;
-
-  .project-intro{
-    color: #00b2cc;
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-weight: bold;
+  .content {
+    min-width: 100%;
+    padding: 50px;
+    @include landscape {
+      padding-left: 150px;
+      padding-right: 70px;
+    }
   }
 
-  .project-features{
-    margin-left: 20px;
-    max-width: 90%;
-    .project-feature{
-      padding-bottom: 5px;
+  .project-title {
+    margin-bottom: 10px;
+  }
+
+  .project-builtwith {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .project-description {
+    line-height: 20px;
+
+    .project-intro {
+      color: #26C6DA;
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .project-features {
+      margin-left: 20px;
+      max-width: 90%;
+      .project-feature {
+        padding-bottom: 5px;
+      }
+    }
+  }
+
+  .project-links {
+    margin-top: 10px;
+    .info-link {
+      margin-bottom: 5px;
     }
   }
 }
 
-.project-links{
-  margin-top: 10px;
-  .info-link{
-    margin-bottom: 5px;
-  }
-}
+@import "leilo/leilo";
+@import "objpermseng";

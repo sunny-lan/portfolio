@@ -36,7 +36,6 @@ function performLayout(orderFunc) {
             article.preview +
             "</div>");
 
-        console.log(article.previewElem);
         infoBlock.append(article.previewElem);
 
         //inject nav link into HTML
@@ -85,25 +84,32 @@ function scrollCalc() {
     // Selected animations
     var errAllow = 50;
     var viewStart = s - errAllow,
-        viewEnd = s + pgHeight + errAllow;
+        viewEnd = s + pgHeight + errAllow,
+        viewCenter = s + pgHeight / 2;
 
     // console.log("View start:", viewStart, "View end:", viewEnd);
+
+    var miniDist = Number.MAX_VALUE;
+    var best;
 
     for (var articleID in articles) if (articles.hasOwnProperty(articleID)) {
         var article = articles[articleID];
         var element = article.previewElem;
         var top = element.offset().top,
-            bottom = top + element.height();
+            center = top + element.height() / 2,
+            dist = Math.abs(center - viewCenter);
 
         // console.log("top: ", top, "bottom: ", bottom);
 
-        if (top >= viewStart && bottom <= viewEnd) {
-            article.navBarElem.addClass('selected');
-            console.log(article.navBarElem.offset().left);
-            // $('#nav-bar').css("left", 100-article.navBarElem.offset().left + "px");
-        } else
-            article.navBarElem.removeClass('selected');
+        if (dist < miniDist) {
+            miniDist = dist;
+            best = article;
+        }
+
+        article.navBarElem.removeClass("selected");
     }
+
+    best.navBarElem.addClass("selected");
 }
 
 function resizeCalc() {

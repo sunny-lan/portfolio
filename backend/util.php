@@ -55,7 +55,7 @@ class Util
     {
         $result = $db->query($query);
         if (!$result)
-            throw new \Exception("Database query failed", Constants::ERR_DB);
+            throw new \Exception("Database query failed: " . $db->error, Constants::ERR_DB);
         return $result;
     }
 }

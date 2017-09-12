@@ -4,22 +4,16 @@
   min-height: 700px;
 
   .background {
-    background: url('/img/leilo_2.png') fixed;
+    background: url('/img/leilo_2.PNG') fixed;
     background-size: cover;
-    filter: opacity(0.5);
   }
 
+
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 
   .content {
-    min-width: 100%;
-    padding: 50px;
-    @include landscape {
-      padding-left: 150px;
-      padding-right: 70px;
-    }
     color: black;
     background: rgba(255,255,255,0.9);
 
