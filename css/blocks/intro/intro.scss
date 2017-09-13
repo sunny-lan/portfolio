@@ -5,8 +5,13 @@
     //make sure angle part of sidebar remains covered
     top: -10%;
 
-    background: url('/img/shapes-bg.png') repeat;
-    opacity: 0.5;
+    background: url('/img/desk-bg-2.jpeg') fixed left;
+    transform: scaleX(-1);
+    background-size: cover;
+    //opacity: 0.5;
+    @include vertical{
+      opacity: 0.5;
+    }
   }
 
   .content {

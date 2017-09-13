@@ -171,6 +171,15 @@ button {
   button:hover {
     background: cornflowerblue; }
 
+a {
+  text-decoration: none;
+  color: #039BE5; }
+  a:hover {
+    font-weight: bold; }
+
+strong {
+  font-weight: bold; }
+
 .background {
   background-repeat: no-repeat;
   position: absolute;
@@ -324,6 +333,15 @@ button {
   button:hover {
     background: cornflowerblue; }
 
+a {
+  text-decoration: none;
+  color: #039BE5; }
+  a:hover {
+    font-weight: bold; }
+
+strong {
+  font-weight: bold; }
+
 .background {
   background-repeat: no-repeat;
   position: absolute;
@@ -377,8 +395,8 @@ button {
 .sidebar#bg {
   background: black; }
   .sidebar#bg .background {
-    filter: invert(100%);
-    background: url("/img/shapes-bg.png") repeat;
+    background: url("/img/planet-bg.jpg") no-repeat;
+    top: -100px;
     bottom: -500px;
     transition: top 0.4s ease, left 0.4s ease; }
 
@@ -410,7 +428,7 @@ button {
   font-family: "Josefin Sans", sans-serif;
   transition: filter 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
   transform: scale(1);
-  opacity: 0.7; }
+  opacity: 0.5; }
   .nav-item.top {
     margin-bottom: 60px; }
   .nav-item.selected {
@@ -547,6 +565,15 @@ button {
   font-size: 20px; }
   button:hover {
     background: cornflowerblue; }
+
+a {
+  text-decoration: none;
+  color: #039BE5; }
+  a:hover {
+    font-weight: bold; }
+
+strong {
+  font-weight: bold; }
 
 .background {
   background-repeat: no-repeat;
@@ -725,6 +752,15 @@ button {
   font-size: 20px; }
   button:hover {
     background: cornflowerblue; }
+
+a {
+  text-decoration: none;
+  color: #039BE5; }
+  a:hover {
+    font-weight: bold; }
+
+strong {
+  font-weight: bold; }
 
 .background {
   background-repeat: no-repeat;
@@ -913,6 +949,15 @@ button {
   button:hover {
     background: cornflowerblue; }
 
+a {
+  text-decoration: none;
+  color: #039BE5; }
+  a:hover {
+    font-weight: bold; }
+
+strong {
+  font-weight: bold; }
+
 .background {
   background-repeat: no-repeat;
   position: absolute;
@@ -945,8 +990,12 @@ button {
 
 #intro-block .background {
   top: -10%;
-  background: url("/img/shapes-bg.png") repeat;
-  opacity: 0.5; }
+  background: url("/img/desk-bg-2.jpeg") fixed left;
+  transform: scaleX(-1);
+  background-size: cover; }
+  @media (max-width: 1099px) {
+    #intro-block .background {
+      opacity: 0.5; } }
 #intro-block .content {
   min-height: 100vh;
   text-align: center;
@@ -1096,6 +1145,15 @@ button {
   font-size: 20px; }
   button:hover {
     background: cornflowerblue; }
+
+a {
+  text-decoration: none;
+  color: #039BE5; }
+  a:hover {
+    font-weight: bold; }
+
+strong {
+  font-weight: bold; }
 
 .background {
   background-repeat: no-repeat;
@@ -1259,6 +1317,15 @@ button {
   font-size: 20px; }
   button:hover {
     background: cornflowerblue; }
+
+a {
+  text-decoration: none;
+  color: #039BE5; }
+  a:hover {
+    font-weight: bold; }
+
+strong {
+  font-weight: bold; }
 
 .background {
   background-repeat: no-repeat;
@@ -1454,6 +1521,15 @@ button {
   button:hover {
     background: cornflowerblue; }
 
+a {
+  text-decoration: none;
+  color: #039BE5; }
+  a:hover {
+    font-weight: bold; }
+
+strong {
+  font-weight: bold; }
+
 .background {
   background-repeat: no-repeat;
   position: absolute;
@@ -1618,6 +1694,15 @@ button {
   button:hover {
     background: cornflowerblue; }
 
+a {
+  text-decoration: none;
+  color: #039BE5; }
+  a:hover {
+    font-weight: bold; }
+
+strong {
+  font-weight: bold; }
+
 .background {
   background-repeat: no-repeat;
   position: absolute;
@@ -1650,20 +1735,21 @@ button {
 
 #project-header-block {
   font-size: 30px;
-  height: 200px; }
+  height: 150px; }
   #project-header-block .background {
-    background: #fff3e0; }
+    background: #1E88E5;
+    background-size: cover; }
   #project-header-block .content {
     min-width: 100%;
-    color: black;
+    color: white;
     font-family: "Josefin Sans", sans-serif;
     text-align: center;
     vertical-align: middle;
-    line-height: 200px; }
+    line-height: 150px; }
 
 .project {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center; }
   .project .content {
     min-width: 100%;
@@ -1672,6 +1758,8 @@ button {
       .project .content {
         padding-left: 150px;
         padding-right: 70px; } }
+    .project .content strong {
+      font-weight: bold; }
   .project .project-title {
     margin-bottom: 10px; }
   .project .project-builtwith {
@@ -1680,7 +1768,6 @@ button {
   .project .project-description {
     line-height: 20px; }
     .project .project-description .project-intro {
-      color: #26C6DA;
       display: block;
       margin-top: 10px;
       margin-bottom: 10px;
@@ -1818,6 +1905,15 @@ button {
   button:hover {
     background: cornflowerblue; }
 
+a {
+  text-decoration: none;
+  color: #039BE5; }
+  a:hover {
+    font-weight: bold; }
+
+strong {
+  font-weight: bold; }
+
 .background {
   background-repeat: no-repeat;
   position: absolute;
@@ -1848,34 +1944,39 @@ button {
     .info-link .link-text:hover {
       font-weight: bold; }
 
-#leilo-block {
-  min-height: 700px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center; }
-  #leilo-block .background {
-    background: url("/img/leilo_2.PNG") fixed;
-    background-size: cover; }
-  #leilo-block .content {
-    color: black;
-    background: rgba(255, 255, 255, 0.9); }
-    #leilo-block .content strong {
-      font-weight: bold; }
-    #leilo-block .content ul {
-      list-style: disc inside; }
+#leilo-block .background {
+  background: #ECEFF1; }
+#leilo-block .content {
+  color: black; }
+#leilo-block .project-intro {
+  color: #1E88E5; }
 
-#objpermseng-block {
-  min-height: 550px; }
-  #objpermseng-block .background {
-    background: url("/img/water-bg.jpeg") fixed left;
+#objpermseng-block .background {
+  background: url("/img/water-bg.jpeg") fixed left;
+  background-size: cover;
+  filter: brightness(50%); }
+#objpermseng-block .content {
+  margin-top: 100px;
+  color: #ECEFF1;
+  background: rgba(0, 3, 7, 0.6); }
+#objpermseng-block .info-link .link-icon {
+  filter: invert(100%); }
+#objpermseng-block .info-link .link-text {
+  color: white; }
+#objpermseng-block .project-intro {
+  color: #90CAF9; }
+
+#tyanide-block {
+  min-height: 100vh;
+  align-items: center; }
+  #tyanide-block .background {
+    background: url("/img/tyanide-1.bmp") fixed right;
     background-size: cover;
-    filter: brightness(50%); }
-  #objpermseng-block .content {
-    color: #e6e6e6;
-    background: rgba(0, 3, 10, 0.6); }
-  #objpermseng-block .info-link .link-icon {
-    filter: invert(100%); }
-  #objpermseng-block .info-link .link-text {
-    color: white; }
+    filter: brightness(70%);
+    opacity: 0.9; }
+  #tyanide-block .content {
+    background: rgba(225, 245, 255, 0.8); }
+    #tyanide-block .content .project-intro {
+      color: #1E88E5; }
 
 /*# sourceMappingURL=index.css.map */

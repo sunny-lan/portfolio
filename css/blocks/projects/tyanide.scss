@@ -1,0 +1,18 @@
+#tyanide-block{
+  min-height: 100vh;
+  align-items: center;
+
+  .background{
+    background: url('/img/tyanide-1.bmp') fixed right;
+    background-size: cover;
+    filter: brightness(70%);
+    opacity: 0.9;
+  }
+  .content{
+    background: rgba(225,245,255,0.8);
+
+    .project-intro{
+      color: #1E88E5;
+    }
+  }
+}

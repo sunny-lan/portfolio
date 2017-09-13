@@ -126,6 +126,15 @@ button {
   button:hover {
     background: cornflowerblue; }
 
+a {
+  text-decoration: none;
+  color: #039BE5; }
+  a:hover {
+    font-weight: bold; }
+
+strong {
+  font-weight: bold; }
+
 .background {
   background-repeat: no-repeat;
   position: absolute;

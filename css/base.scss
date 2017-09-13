@@ -61,6 +61,19 @@ button {
   }
 }
 
+a{
+  text-decoration: none;
+  color: #039BE5;
+  &:hover{
+    font-weight: bold;
+  }
+}
+
+
+strong {
+  font-weight: bold;
+}
+
 //mixins
 @mixin flex {
   // write the css here

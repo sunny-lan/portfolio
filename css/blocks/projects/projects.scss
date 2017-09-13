@@ -2,7 +2,7 @@
 
 .project {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 
   .content {
@@ -11,6 +11,10 @@
     @include landscape {
       padding-left: 150px;
       padding-right: 70px;
+    }
+
+    strong {
+      font-weight: bold;
     }
   }
 
@@ -27,7 +31,6 @@
     line-height: 20px;
 
     .project-intro {
-      color: #26C6DA;
       display: block;
       margin-top: 10px;
       margin-bottom: 10px;
@@ -51,5 +54,6 @@
   }
 }
 
-@import "leilo/leilo";
+@import "leilo";
 @import "objpermseng";
+@import "tyanide";

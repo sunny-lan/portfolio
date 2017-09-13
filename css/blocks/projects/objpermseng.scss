@@ -1,7 +1,4 @@
 #objpermseng-block {
-
-  min-height: 550px;
-
   .background {
     background: url("/img/water-bg.jpeg") fixed left;
     background-size: cover;
@@ -10,7 +7,8 @@
   }
 
   .content {
-    color: rgb(230, 230, 230);
+    margin-top: 100px;
+    color: #ECEFF1;
     background: rgba(0, 3, 7, 0.6);
   }
 
@@ -22,5 +20,9 @@
     .link-text {
       color: white;
     }
+  }
+
+  .project-intro{
+    color: #90CAF9;
   }
 }

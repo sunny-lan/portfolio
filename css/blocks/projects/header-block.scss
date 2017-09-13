@@ -2,15 +2,16 @@
 
 #project-header-block {
   font-size: 30px;
-  $height: 200px;
+  $height: 150px;
   height: $height;
   .background {
-    background: #fff3e0;
+    background: #1E88E5;
+    background-size: cover;
   }
 
   .content{
     min-width: 100%;
-    color: black;
+    color: white;
     font-family: $secondary-font;
     text-align: center;
     vertical-align: middle;

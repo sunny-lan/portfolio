@@ -45,6 +45,14 @@ function performLayout(orderFunc) {
             "</div>");
         navBar.append(article.navBarElem);
 
+        //add click handler
+        const previewElem = article.previewElem;
+        article.navBarElem.click(function () {
+            $('html, body').animate({
+                scrollTop: previewElem.offset().top - $(window).height() / 2 + previewElem.height()/2
+            }, 1000, "easeOutQuad");
+        });
+
         count++;
     }
 
